@@ -1,10 +1,9 @@
-VisDoc generates html documentation from ActionScript 2.0, 3.0 and Java class files
-
+VisDoc generates html documentation from ActionScript 2.0, 3.0 and Java class files.
 
 
 USAGE
 
-VisDoc can be used from the command line or (on Mac) using an application.
+VisDoc can be used from the command line (platform neutral, Perl required) or using an application (on Mac).
 
 The application is straightforward. 
 
@@ -32,7 +31,6 @@ saveXML               0,
 templateCssDirectory  'templates/css',
 templateJsDirectory   'templates/js',
 templateFreeMarker    'templates/ftl/VisDoc.ftl',
-
 
 
 LICENSE
