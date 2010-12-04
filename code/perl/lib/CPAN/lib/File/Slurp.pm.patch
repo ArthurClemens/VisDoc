@@ -1,0 +1,11 @@
+--- Slurp.pm.orig	2009-09-10 13:37:33.000000000 +0200
++++ Slurp.pm	2009-09-10 13:37:38.000000000 +0200
+@@ -3,7 +3,7 @@
+ use strict;
+ 
+ use Carp ;
+-use POSIX qw( :fcntl_h ) ;
++#use POSIX qw( :fcntl_h ) ;
+ use Fcntl qw( :DEFAULT ) ;
+ use Symbol ;
+ 

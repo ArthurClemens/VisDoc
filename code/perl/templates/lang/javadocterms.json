@@ -1,0 +1,46 @@
+{
+	# Javadoc field names
+	"author" : "Author",
+	"docRoot" : "docroot", # not implemented
+	"deprecated" : "Deprecated",
+	"exception" : "Exception",
+	"param" : "Parameters",
+	"return" : "Returns",
+	"see" : "See also",
+	"serial" : "serial", # not implemented
+	"serialData" : "serialData", # not implemented
+	"serialField" : "serialField", # not implemented
+	"since" : "Since",
+	"throws" : "Throws",
+	"overrides" : "Overrides",
+	"specified" : "Specified by",
+	"value" : "value",
+	"version" : "Version",
+	
+	# FlashDoc field names
+	"helpid" : "", # not implemented, hidden
+	"private" : "",
+	"tiptext" : "", # not implemented, hidden
+	"class" : "", # not implemented, hidden
+	"method" : "", # not implemented, hidden
+	"langversion" : "",
+	"playerversion" : "",
+	"metadata" : "Component metadata",
+	
+	# Field names not in javadoc spec, but commonly used
+	"description" : "Description",
+	"example" : "Example",
+	"usage" : "Usage",
+	"use" : "Usage",
+	"returns" : "Returns",
+	
+	# Useful field names
+	"exclude" : "", # no visible text
+	"overrides" : "Overrides",
+	"implementationNote" : "Implementation note",
+	"usageNote" : "Usage note",
+	"history" : "Version history",
+	"todo" : "To do",
+	"sends" : "Events broadcasted to listeners",
+	"overload" : "Overloading"
+}

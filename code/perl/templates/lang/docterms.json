@@ -1,0 +1,412 @@
+{
+	"summary_classes" : {
+		"default" : "Classes"
+	},
+	"summary_interfaces" : {
+		"default" : "Interfaces"
+	},
+	"summary_functions" : {
+		"default" : "Functions"
+	},
+	"summary_exception" : {
+		"default" : "Exceptions",
+		"java" : "Exceptions"
+	},
+	"classproperty_package" : {
+		"default" : "Package"
+	},
+	"classproperty_anonymous_package" : {
+		"default" : "Anonymous package"
+	},
+	"classproperty_kind" : {
+		"default" : "Kind of class"
+	},
+	"classproperty_class" : {
+		"default" : "class"
+	},
+	"classproperty_inner" : {
+		"default" : "inner",
+		"java" : "inner"
+	},
+	"classproperty_interface" : {
+		"default" : "interface"
+	},
+	"classproperty_enclosingclass" : {
+		"default" : "Enclosing class",
+		"java" : "Enclosing class"
+	},
+	"classproperty_inheritsfrom" : {
+		"default" : "Inherits from"
+	},
+	"classproperty_implements" : {
+		"default" : "Implements"
+	},
+	"classproperty_implementedby" : {
+		"default" : "Implemented by"
+	},
+	"classproperty_subclasses" : {
+		"default" : "Known subclasses"
+	},
+	"classproperty_subinterfaces" : {
+		"default" : "Known subinterfaces"
+	},
+	"classproperty_dispatchedby" : {
+		"default" : "Dispatched by"
+	},
+	"classproperty_none" : {
+		"default" : "none"
+	},
+	"memberproperty_instance_member" : {
+		"default" : "instance"
+	},
+	"memberproperty_method" : {
+		"default" : "method"
+	},
+	"memberproperty_property" : {
+		"default" : "property",
+		"java" : "field"
+	},
+	"memberproperty_const" : {
+		"default" : "constant"
+	},
+	"memberproperty_namespace" : {
+		"default" : "namespace"
+	},
+	"memberproperty_constructor" : {
+		"default" : "constructor"
+	},
+	"memberproperty_class_member" : {
+		"default" : "class",
+		"as2" : "static",
+		"as3" : "static",
+		"java" : "class"
+	},
+	"classdetail_version" : {
+		"default" : "Version"
+	},
+	"classdetail_lastmodified" : {
+		"default" : "File last modified"
+	},
+	"classdetail_author" : {
+		"default" : "Author"
+	},
+	"header_summary" : {
+		"default" : "Summary"
+	},
+	"header_summary_inheritedinnerclasses" : {
+		"default" : "Inner classes inherited from"
+	},
+	"header_summary_inheritedmethods" : {
+		"default" : "Methods inherited from"
+	},
+	"header_summary_inheritedclassmethods" : {
+		"default" : "Class methods inherited from"
+	},
+	"header_summary_inheritedinstancemethods" : {
+		"default" : "Instance methods inherited from"
+	},
+	"header_summary_inheritedeventhandlers" : {
+		"default" : "Event handlers inherited from"
+	},
+	"header_classes" : {
+		"default" : "Classes"
+	},
+	"header_functions" : {
+		"default" : "Functions"
+	},
+	"header_innerclasses" : {
+		"default" : "Inner classes",
+		"java" : "Inner classes"
+	},
+	"header_constructor" : {
+		"default" : "Constructor",
+		"as2" : "Constructor",
+		"as3" : "Constructor",
+		"java" : "Constructors"
+	},
+	"header_methods" : {
+		"default" : "Methods"
+	},
+	"header_classmethods" : {
+		"default" : "Class methods"
+	},
+	"header_instancemethods" : {
+		"default" : "Instance methods"
+	},
+	"header_packagefunctions" : {
+		"default" : "Package functions"
+	},
+	"header_eventhandlers" : {
+		"default" : "Event handlers"
+	},
+	"header_privateclass" : {
+		"default" : "private class"
+	},
+	"toc_interface" : {
+		"default" : "interface"
+	},
+	"toc_innerclass" : {
+		"default" : "private class",
+		"java" : "inner class",
+		"as2" : "private class",
+		"as3" : "private class"
+	},
+	"toc_innerinterface" : {
+		"default" : "private interface",
+		"java" : "inner interface",
+		"as2" : "private interface",
+		"as3" : "private interface"
+	},
+	"toc_private_function" : {
+		"default" : "private function"
+	},
+	"toc_packages_title" : {
+		"default" : "Packages"
+	},
+	"interface_definition" : {
+		"default" : "interface definition"
+	},
+	"type_deprecated" : {
+		"default" : "deprecated"
+	},
+	"type_interface" : {
+		"default" : "interface"
+	},
+	"all" : {
+		"default" : "All:"
+	},
+	"index_link" : {
+		"default" : "Main"
+	},
+	"tree_link" : {
+		"default" : "Package tree"
+	},
+	"tree_title" : {
+		"default" : "Package and Class Hierarchy",
+		"java" : "Package and Class Hierarchy",
+		"as2" : "Class Hierarchy",
+		"as3" : "Package and Class Hierarchy"
+	},
+	"all_classes_link" : {
+		"default" : "Classes"
+	},
+	"all_classes_title" : {
+		"default" : "All classes and interfaces"
+	},
+	"all_packages_simple_title" : {
+		"default" : "Packages and classes"
+	},
+	"all_classes_simple_title" : {
+		"default" : "Classes and interfaces"
+	},
+	"all_methods_link" : {
+		"default" : "Methods"
+	},
+	"all_methods_title" : {
+		"default" : "All methods"
+	},
+	"all_properties_link" : {
+		"default" : "Properties",
+		"java" : "Fields"
+	},
+	"all_properties_title" : {
+		"default" : "All properties",
+		"java" : "All fields"
+	},
+	"all_constants_link" : {
+		"default" : "Constants"
+	},
+	"all_constants_title" : {
+		"default" : "All constants"
+	},
+	"all_deprecated_link" : {
+		"default" : "Deprecated"
+	},
+	"all_deprecated_title" : {
+		"default" : "Deprecated"
+	},
+	"deprecated_packages" : {
+		"default" : "Deprecated packages"
+	},
+	"deprecated_interfaces" : {
+		"default" : "Deprecated interfaces"
+	},
+	"deprecated_classes" : {
+		"default" : "Deprecated classes"
+	},
+	"deprecated_methods" : {
+		"default" : "Deprecated methods"
+	},
+	"deprecated_properties" : {
+		"default" : "Deprecated properties"
+	},
+	"overview" : {
+		"default" : "Overview"
+	},
+	"read" : {
+		"default" : "read",
+	},
+	"write" : {
+		"default" : "write",
+	},
+	"footer_createdwith" : {
+		"default" : "Created with"
+	},
+	"menu_showTOC" : {
+		"default" : "Show TOC"
+	},
+	"menu_hideTOC" : {
+		"default" : "Hide TOC"
+	},
+	"summary_showTypeInfo" : {
+		"default" : "Show type info"
+	},
+	"summary_hideTypeInfo" : {
+		"default" : "Hide type info"
+	},
+	"summary_showSummaries" : {
+		"default" : "Show summaries"
+	},
+	"summary_hideSummaries" : {
+		"default" : "Hide summaries"
+	},
+	"summary_sortAlphabetically" : {
+		"default" : "Sort alphabetically"
+	},
+	"summary_sortSourceOrder" : {
+		"default" : "Sort by source order"
+	},
+	"event_type" : {
+		"default" : "with type:"
+	},
+	"generic_object_event_type" : {
+		"default" : "Object with type:"
+	},
+	"includesource_viewsourcebutton" : {
+		"default" : "View source"
+	},
+	"includesource_hidesourcebutton" : {
+		"default" : "Hide source"
+	},
+	"includesource_tosourceend" : {
+		"default" : "Source end"
+	},
+	"includesource_tosourcetop" : {
+		"default" : "Source top"
+	},
+	"classproperty_dynamicclass" : {
+		"default" : "Dynamic class",
+		"as2" : "Dynamic class",
+		"as3" : "Dynamic class"
+	},
+	"classproperty_intrinsicclass" : {
+		"default" : "Intrinsic class",
+		"as2" : "Intrinsic class",
+		"as3" : "Intrinsic class"
+	},
+	"classproperty_privateclass" : {
+		"default" : "Private class",
+		"java" : "Private class"
+	},
+	"classproperty_publicclass" : {
+		"default" : "Public class",
+		"java" : "Public class"
+	},
+	"classproperty_packageprivateclass" : {
+		"default" : "(Package private) class",
+		"as3" : "(Internal) class",
+		"java" : "(Package private) class"
+	},
+	"classproperty_exception" : {
+		"default" : "Exception",
+		"java" : "Exception"
+	},
+	"classdetail_classpath" : {
+		"default" : "Classpath",
+		"as2" : "Classpath",
+		"as3" : "Classpath",
+		"java" : "Package classpath"
+	},
+	"header_summary_inheritedproperties" : {
+		"default" : "Properties inherited from",
+		"as2" : "Properties inherited from",
+		"as3" : "Properties inherited from",
+		"java" : "Fields inherited from"
+	},
+	"header_summary_inheritedclassproperties" : {
+		"default" : "Class properties inherited from",
+		"as2" : "Class properties inherited from",
+		"as3" : "Class properties inherited from",
+		"java" : "Class fields inherited from"
+	},
+	"header_summary_inheritedinstanceproperties" : {
+		"default" : "Instance properties inherited from",
+		"as2" : "Instance properties inherited from",
+		"as3" : "Instance properties inherited from",
+		"java" : "Instance fields inherited from"
+	},
+	"header_summary_inheritedconstants" : {
+		"default" : "Constants inherited from"
+	},
+	"header_constructor" : {
+		"default" : "Constructor",
+		"as2" : "Constructor",
+		"as3" : "Constructor",
+		"java" : "Constructors"
+	},
+	"header_properties" : {
+		"default" : "Properties",
+		"as2" : "Properties",
+		"as3" : "Properties",
+		"java" : "Fields"
+	},
+	"header_constants" : {
+		"default" : "Constants"
+	},
+	"header_namespaces" : {
+		"default" : "Namespaces"
+	},
+	"header_classproperties" : {
+		"default" : "Class properties",
+		"as2" : "Class properties",
+		"as3" : "Class properties",
+		"java" : "Class fields"
+	},
+	"header_instanceproperties" : {
+		"default" : "Instance properties",
+		"as2" : "Instance properties",
+		"as3" : "Instance properties",
+		"java" : "Instance fields"
+	},
+	"access_default" : {
+		"default" : "",
+		"as2" : "public",
+		"as3" : "internal",
+		"java" : "(package private)"
+	},
+	"menu_showPrivate" : {
+		"default" : "Show private and protected",
+		"as2" : "Show private",
+		"as3" : "Show private and protected",
+		"java" : "Show private and protected"
+	},
+	"menu_hidePrivate" : {
+		"default" : "Hide private and protected",
+		"as2" : "Hide private",
+		"as3" : "Hide private and protected",
+		"java" : "Hide private and protected"
+	},
+	"access_keys" : {
+		"default" : "Access keys"
+	},
+	"summary" : {
+		"default" : "Access keys"
+	},
+	"anonymous_inner_class" : {
+		"default" : "(anonymous inner class)",
+		"java" : "(anonymous inner class)"
+	},
+	"package" : {
+		"default" : "package"
+	}
+}

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document><cssFile><![CDATA[../css/shCoreDefault.min.css]]></cssFile><cssFile><![CDATA[../css/VisDoc.min.css]]></cssFile><jsFile><![CDATA[../js/1_jquery.min.js]]></jsFile><jsFile><![CDATA[../js/2_jquery.cookie.min.js]]></jsFile><jsFile><![CDATA[../js/3_jquery.simpletreeview.min.js]]></jsFile><jsFile><![CDATA[../js/4_shCore.min.js]]></jsFile><jsFile><![CDATA[../js/5_shBrushAS3.min.js]]></jsFile><jsFile><![CDATA[../js/6_shBrushJava.min.js]]></jsFile><jsFile><![CDATA[../js/7_VisDoc.min.js]]></jsFile><pageClass><![CDATA[package_animals]]></pageClass><htmlTitle><![CDATA[animals | Documentation]]></htmlTitle><title><![CDATA[animals]]></title><classData>
+    <packageTitle>
+        <title><![CDATA[Package]]></title>
+    </packageTitle>
+    <classDetails>
+        <item>
+            <title><![CDATA[Classpath]]></title>
+            <value><![CDATA[animals]]></value>
+        </item>
+    </classDetails>
+    <classDescription>
+        <summary><![CDATA[Information about this "package". ]]></summary>
+        <restOfDescription><![CDATA[More information about this package.]]></restOfDescription>
+    </classDescription>
+</classData><memberSections>
+    <memberSection>
+        <title><![CDATA[Classes]]></title>
+        <id><![CDATA[Classes]]></id>
+        <member>
+            <id><![CDATA[animals.Cat]]></id>
+            <title>
+                <link>
+                    <name><![CDATA[Cat]]></name>
+                    <uri><![CDATA[animals_Cat]]></uri>
+                </link>
+            </title>
+        </member>
+        <member>
+            <id><![CDATA[animals.SpeakingPets]]></id>
+            <title>
+                <link>
+                    <name><![CDATA[SpeakingPets]]></name>
+                    <uri><![CDATA[animals_SpeakingPets]]></uri>
+                </link>
+            </title>
+        </member>
+    </memberSection>
+    <memberSection>
+        <title><![CDATA[Functions]]></title>
+        <id><![CDATA[Functions]]></id>
+        <member>
+            <id><![CDATA[growl]]></id>
+            <title><![CDATA[growl]]></title>
+            <fullMemberString>
+                <member><![CDATA[function <strong>growl</strong>() : void]]></member>
+            </fullMemberString>
+        </member>
+    </memberSection>
+</memberSections><meta>
+    <createdWith><![CDATA[Created with]]></createdWith>
+    <link>
+        <name><![CDATA[VisDoc]]></name>
+        <uri><![CDATA[http://visdoc.org/]]></uri>
+    </link>
+    <showTOC><![CDATA[Show TOC]]></showTOC>
+    <hideTOC><![CDATA[Hide TOC]]></hideTOC>
+</meta><navigation>
+    <tocList>
+        <listGroup>
+            <item>
+                <link>
+                    <name><![CDATA[Documentation]]></name>
+                    <uri><![CDATA[index]]></uri>
+                </link>
+            </item>
+        </listGroup>
+        <listGroup>
+            <id><![CDATA[treemenu]]></id>
+            <listGroupTitle><![CDATA[Packages and classes]]></listGroupTitle>
+            <listGroup>
+                <listGroupTitle>
+                    <item>
+                        <link>
+                            <name><![CDATA[animals]]></name>
+                            <uri><![CDATA[package_animals]]></uri>
+                        </link>
+                        <package><![CDATA[true]]></package>
+                    </item>
+                </listGroupTitle>
+                <listGroup>
+                    <item>
+                        <packagePath><![CDATA[animals.]]></packagePath>
+                        <link>
+                            <name><![CDATA[Cat]]></name>
+                            <uri><![CDATA[animals_Cat]]></uri>
+                        </link>
+                        <class><![CDATA[true]]></class>
+                    </item>
+                    <item>
+                        <packagePath><![CDATA[animals.]]></packagePath>
+                        <link>
+                            <name><![CDATA[SpeakingPets]]></name>
+                            <uri><![CDATA[animals_SpeakingPets]]></uri>
+                        </link>
+                        <class><![CDATA[true]]></class>
+                    </item>
+                </listGroup>
+            </listGroup>
+        </listGroup>
+    </tocList>
+    <globalNav>
+        <items>
+            <item>
+                <link>
+                    <name><![CDATA[Package tree]]></name>
+                    <uri><![CDATA[all-packages]]></uri>
+                </link>
+            </item>
+            <item>
+                <link>
+                    <name><![CDATA[Classes]]></name>
+                    <uri><![CDATA[all-classes]]></uri>
+                </link>
+            </item>
+            <item>
+                <link>
+                    <name><![CDATA[Methods]]></name>
+                    <uri><![CDATA[all-methods]]></uri>
+                </link>
+            </item>
+            <item>
+                <name><![CDATA[Constants]]></name>
+            </item>
+            <item>
+                <name><![CDATA[Properties]]></name>
+            </item>
+            <item>
+                <name><![CDATA[Deprecated]]></name>
+            </item>
+        </items>
+    </globalNav>
+</navigation></document>

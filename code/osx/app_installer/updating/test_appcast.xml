@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <channel>
+      <title>VisDoc Changelog</title>
+      <link>http://visiblearea.com/visdoc/appcast.xml</link>
+      <description>Most recent changes with links to updates.</description>
+      <language>en</language>
+         <item>
+            <title>Version 1.1 (2 bugs fixed; 3 new features)</title>
+						<sparkle:releaseNotesLink>
+							http://visiblearea.com/visdoc/index.html
+						</sparkle:releaseNotesLink>
+            <pubDate>Wed, 16 Nov 2009 19:20:11 +0000</pubDate>
+            <enclosure url="http://visiblearea.com/visdoc/download/visdoc.1.1.zip" sparkle:version="1.1" length="1623481" type="application/octet-stream" sparkle:dsaSignature="MCwCFA8hdp5Mlzil+ryAb9mViEWBa4BEAhQCeirXEnr+Kx8f/mypr4qtrTTcSg==" />
+         </item>
+   </channel>
+</rss>
