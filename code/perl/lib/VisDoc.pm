@@ -628,12 +628,6 @@ sub _createIndexHtmlPageXmlData {
     return $formatter->format($inXmlWriter);
 }
 
-sub _cleanupSpacesBetweenSpans {
-    my ($htmlRef) = @_;
-
-    ${$htmlRef} =~ s/(<\/span>)[[:space:]]+(<span)/$1$2/go;
-}
-
 1;
 
 # VisDoc - Code documentation generator, http://visdoc.org

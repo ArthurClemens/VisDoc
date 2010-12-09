@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E05A85910B1AD560035FCC1 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 8E05A85710B1AD560035FCC1 /* dsa_pub.pem */; };
 		8E05A8BB10B1DECE0035FCC1 /* _visdoc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8E05A8BA10B1DECE0035FCC1 /* _visdoc.icns */; };
 		8E05A96C10B1F4F10035FCC1 /* _visdoc-document.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8E05A96B10B1F4F10035FCC1 /* _visdoc-document.icns */; };
 		8E05A9A610B2B0F90035FCC1 /* LayoutSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E05A9A510B2B0F90035FCC1 /* LayoutSettingsController.m */; };
@@ -45,6 +44,7 @@
 		8EBA161010551A4900E51387 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8EBA161110551A4900E51387 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8EBA161810551A4900E51387 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		8EC6559F12B0A8D400F2D9C5 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 8EC6559E12B0A8D400F2D9C5 /* dsa_pub.pem */; };
 		8EF7387511DFB07200BD122B /* perl in Resources */ = {isa = PBXBuildFile; fileRef = 8EF7375A11DFB07200BD122B /* perl */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +68,6 @@
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		8E05A85710B1AD560035FCC1 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		8E05A8BA10B1DECE0035FCC1 /* _visdoc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = _visdoc.icns; sourceTree = "<group>"; };
 		8E05A96B10B1F4F10035FCC1 /* _visdoc-document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "_visdoc-document.icns"; sourceTree = "<group>"; };
 		8E05A9A410B2B0F90035FCC1 /* LayoutSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutSettingsController.h; sourceTree = "<group>"; };
@@ -121,6 +120,7 @@
 		8EB07A1310A8968D00085D2E /* VisDoc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VisDoc.png; sourceTree = "<group>"; };
 		8EBA161D10551A4900E51387 /* VisDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBA161F10551A4900E51387 /* VisDoc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisDoc-Info.plist"; sourceTree = "<group>"; };
+		8EC6559E12B0A8D400F2D9C5 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = ../app_installer/updating/dsa_pub.pem; sourceTree = "<group>"; };
 		8EF7375A11DFB07200BD122B /* perl */ = {isa = PBXFileReference; lastKnownFileType = folder; name = perl; path = ../../perl; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -182,8 +182,8 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8EC6559D12B0A8C300F2D9C5 /* updating */,
 				8EF7375A11DFB07200BD122B /* perl */,
-				8E05A85510B1AD560035FCC1 /* updating */,
 				8E11612110A0A77500B12764 /* img */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
@@ -201,14 +201,6 @@
 				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8E05A85510B1AD560035FCC1 /* updating */ = {
-			isa = PBXGroup;
-			children = (
-				8E05A85710B1AD560035FCC1 /* dsa_pub.pem */,
-			);
-			path = updating;
 			sourceTree = "<group>";
 		};
 		8E11612110A0A77500B12764 /* img */ = {
@@ -317,6 +309,14 @@
 			path = icon;
 			sourceTree = "<group>";
 		};
+		8EC6559D12B0A8C300F2D9C5 /* updating */ = {
+			isa = PBXGroup;
+			children = (
+				8EC6559E12B0A8D400F2D9C5 /* dsa_pub.pem */,
+			);
+			name = updating;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -382,12 +382,12 @@
 				8E11655F10A4DD4F00B12764 /* cancel button pressed.png in Resources */,
 				8E11696910A6008400B12764 /* in_progress.png in Resources */,
 				8EB07A1510A8968D00085D2E /* VisDoc.png in Resources */,
-				8E05A85910B1AD560035FCC1 /* dsa_pub.pem in Resources */,
 				8E05A8BB10B1DECE0035FCC1 /* _visdoc.icns in Resources */,
 				8E05A96C10B1F4F10035FCC1 /* _visdoc-document.icns in Resources */,
 				8EF7387511DFB07200BD122B /* perl in Resources */,
 				8E2C599A124FC3A6004535FE /* MyDocument.nib in Resources */,
 				8E2C59A1124FC418004535FE /* MainMenu.xib in Resources */,
+				8EC6559F12B0A8D400F2D9C5 /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

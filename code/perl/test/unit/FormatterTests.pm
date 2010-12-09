@@ -36,25 +36,41 @@ sub set_up {
 sub test_formatCodeText {
     my ($this) = @_;
 
-    my $text = '<code>
-// returns a float between 8 and 19, for example 7.87623
-Random.between(8, 19, true);
-</code>
-';
+    my $text = '// returns a float between 8 and 19, for example 7.87623
+Random.between(8, 19, true);';
 
     my $fileData = VisDoc::FileData->new();
     $fileData->{language} = 'as3';
     my $result   = $fileData->_formatCodeText($text);
     my $expected = '<pre>
-&<span class="codeKeyword">lt</span>;code&<span class="codeKeyword">gt</span>;
 <span class="codeComment">// returns a float between 8 and 19, for example 7.87623</span>
-Random.between(<span class="codeNumber">8</span>, <span class="codeNumber">19</span>, <span class="codeIdentifier">true</span>);&<span class="codeKeyword">lt</span>;/code&<span class="codeKeyword">gt</span>;
+Random.between(<span class="codeNumber">8</span>, <span class="codeNumber">19</span>, <span class="codeIdentifier">true</span>);
 </pre>';
 
     print("RES=$result.\n")   if $debug;
     print("EXP=$expected.\n") if $debug;
     $this->assert( $result eq $expected );
 }
+
+=pod
+
+=cut
+
+sub test_formatCodeText2 {
+    my ($this) = @_;
+
+    my $text = 'trace(\'Error: \' + somevariable);';
+
+    my $fileData = VisDoc::FileData->new();
+    $fileData->{language} = 'as3';
+    my $result   = $fileData->_formatCodeText($text);
+    my $expected = '<code><span class="codeIdentifier">trace</span>(<span class="codeString">&#39;<span class="codeIdentifier">Error</span>: &#39;</span> + somevariable);</code>';
+
+    print("RES=$result.\n")   if $debug;
+    print("EXP=$expected.\n") if $debug;
+    $this->assert( $result eq $expected );
+}
+
 
 =pod
 
@@ -69,8 +85,9 @@ Random.between(8, 19, true);';
     VisDoc::StringUtils::convertHtmlEntities($text);
 
     my $formatter = VisDoc::Formatter::formatter('as3');
-    $formatter->colorize($text);
-
+    $formatter->prepareColorize($text);
+    $formatter->finishColorize($text);
+    
     my $result = $text;
     my $expected =
 '<span class="codeComment">// returns a float between 8 and 19, for example 7.87623</span>
@@ -93,7 +110,8 @@ sub test_colorizeCode_2 {
     VisDoc::StringUtils::convertHtmlEntities($text);
 
     my $formatter = VisDoc::Formatter::formatter('as3');
-    $formatter->colorize($text);
+    $formatter->prepareColorize($text);
+    $formatter->finishColorize($text);
 
     my $result = $text;
     my $expected =
@@ -117,7 +135,8 @@ Random.Object(["string1","string2","string3","string4"]);';
     VisDoc::StringUtils::convertHtmlEntities($text);
 
     my $formatter = VisDoc::Formatter::formatter('as3');
-    $formatter->colorize($text);
+    $formatter->prepareColorize($text);
+    $formatter->finishColorize($text);
 
     my $result = $text;
     my $expected =

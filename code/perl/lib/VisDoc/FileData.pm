@@ -605,10 +605,12 @@ sub _formatCodeText {
     $text =~ s/\n\n/\n/go;
     $text = $this->_equalizeLeftIndent($text);
 
+    my $formatter = VisDoc::Formatter::formatter( $this->{language} );
+
+	$formatter->prepareColorize($text);
     VisDoc::StringUtils::convertHtmlEntities($text);
 
-    my $formatter = VisDoc::Formatter::formatter( $this->{language} );
-    $formatter->colorize($text);
+    $formatter->finishColorize($text);
 
     # place code text in <pre> text if running on multiple lines
     my $tag = ( $text =~ m/\n/g ) ? 'pre' : 'code';

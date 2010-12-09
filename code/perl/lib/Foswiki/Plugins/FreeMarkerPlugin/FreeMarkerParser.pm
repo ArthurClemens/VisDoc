@@ -501,15 +501,14 @@ sub new {
 [
 	{#State 0
 		ACTIONS => {
-			'variable_verbatim' => 15,
-			'string' => 8,
 			'tag_else' => 9,
 			"<#" => 10,
 			"whitespace" => 19,
-			"<\@" => -19,
+			'variable_verbatim' => 15,
+			'string' => 8,
 			"\${" => 21
 		},
-		DEFAULT => -3,
+		DEFAULT => -18,
 		GOTOS => {
 			'tag_assign' => 3,
 			'tag_ftl' => 2,
@@ -537,13 +536,13 @@ sub new {
 		}
 	},
 	{#State 2
-		DEFAULT => -15
+		DEFAULT => -14
 	},
 	{#State 3
-		DEFAULT => -8
+		DEFAULT => -7
 	},
 	{#State 4
-		DEFAULT => -5
+		DEFAULT => -4
 	},
 	{#State 5
 		ACTIONS => {
@@ -552,7 +551,7 @@ sub new {
 			'tag_else' => 9,
 			"<#" => 10,
 			"whitespace" => 19,
-			"<\@" => -19,
+			"<\@" => -18,
 			"\${" => 21
 		},
 		DEFAULT => -1,
@@ -575,7 +574,7 @@ sub new {
 		}
 	},
 	{#State 6
-		DEFAULT => -11
+		DEFAULT => -10
 	},
 	{#State 7
 		ACTIONS => {
@@ -583,43 +582,43 @@ sub new {
 		}
 	},
 	{#State 8
-		DEFAULT => -7
+		DEFAULT => -6
 	},
 	{#State 9
-		DEFAULT => -13
+		DEFAULT => -12
 	},
 	{#State 10
 		ACTIONS => {
 			"dump" => 26
 		},
-		DEFAULT => -96
+		DEFAULT => -95
 	},
 	{#State 11
-		DEFAULT => -9
+		DEFAULT => -8
 	},
 	{#State 12
-		DEFAULT => -10
+		DEFAULT => -9
 	},
 	{#State 13
-		DEFAULT => -4
+		DEFAULT => -3
 	},
 	{#State 14
-		DEFAULT => -16
+		DEFAULT => -15
 	},
 	{#State 15
-		DEFAULT => -6
+		DEFAULT => -5
 	},
 	{#State 16
-		DEFAULT => -14
+		DEFAULT => -13
 	},
 	{#State 17
-		DEFAULT => -12
+		DEFAULT => -11
 	},
 	{#State 18
-		DEFAULT => -17
+		DEFAULT => -16
 	},
 	{#State 19
-		DEFAULT => -18
+		DEFAULT => -17
 	},
 	{#State 20
 		ACTIONS => {
@@ -637,16 +636,16 @@ sub new {
 		}
 	},
 	{#State 21
-		DEFAULT => -149,
+		DEFAULT => -148,
 		GOTOS => {
 			'@24-1' => 36
 		}
 	},
 	{#State 22
-		DEFAULT => -97
+		DEFAULT => -96
 	},
 	{#State 23
-		DEFAULT => -124,
+		DEFAULT => -123,
 		GOTOS => {
 			'@9-2' => 37
 		}
@@ -658,31 +657,31 @@ sub new {
 		DEFAULT => 0
 	},
 	{#State 26
-		DEFAULT => -146,
+		DEFAULT => -145,
 		GOTOS => {
 			'@22-2' => 38
 		}
 	},
 	{#State 27
-		DEFAULT => -135,
+		DEFAULT => -134,
 		GOTOS => {
 			'@17-2' => 39
 		}
 	},
 	{#State 28
-		DEFAULT => -132,
+		DEFAULT => -131,
 		GOTOS => {
 			'@15-2' => 40
 		}
 	},
 	{#State 29
-		DEFAULT => -144,
+		DEFAULT => -143,
 		GOTOS => {
 			'@21-2' => 41
 		}
 	},
 	{#State 30
-		DEFAULT => -138,
+		DEFAULT => -137,
 		GOTOS => {
 			'@19-2' => 42
 		}
@@ -697,7 +696,7 @@ sub new {
 		}
 	},
 	{#State 32
-		DEFAULT => -128,
+		DEFAULT => -127,
 		GOTOS => {
 			'@12-2' => 46
 		}
@@ -708,10 +707,10 @@ sub new {
 		}
 	},
 	{#State 34
-		DEFAULT => -109
+		DEFAULT => -108
 	},
 	{#State 35
-		DEFAULT => -114
+		DEFAULT => -113
 	},
 	{#State 36
 		ACTIONS => {
@@ -841,7 +840,7 @@ sub new {
 		ACTIONS => {
 			"=" => 89
 		},
-		DEFAULT => -106,
+		DEFAULT => -105,
 		GOTOS => {
 			'@5-3' => 90
 		}
@@ -850,14 +849,14 @@ sub new {
 		ACTIONS => {
 			'DATA_KEY' => 91
 		},
-		DEFAULT => -93,
+		DEFAULT => -92,
 		GOTOS => {
 			'expr_assignments' => 92,
 			'expr_assignment' => 44
 		}
 	},
 	{#State 45
-		DEFAULT => -104,
+		DEFAULT => -103,
 		GOTOS => {
 			'@4-3' => 93
 		}
@@ -896,7 +895,7 @@ sub new {
 		ACTIONS => {
 			'DATA_KEY' => 95
 		},
-		DEFAULT => -119,
+		DEFAULT => -118,
 		GOTOS => {
 			'macroparams' => 96,
 			'macroparam' => 97
@@ -912,7 +911,7 @@ sub new {
 		}
 	},
 	{#State 49
-		DEFAULT => -214
+		DEFAULT => -213
 	},
 	{#State 50
 		ACTIONS => {
@@ -934,10 +933,10 @@ sub new {
 	},
 	{#State 52
 		ACTIONS => {
-			".." => -218,
+			".." => -217,
 			"(" => 104
 		},
-		DEFAULT => -151
+		DEFAULT => -150
 	},
 	{#State 53
 		ACTIONS => {
@@ -953,10 +952,10 @@ sub new {
 		}
 	},
 	{#State 54
-		DEFAULT => -202
+		DEFAULT => -201
 	},
 	{#State 55
-		DEFAULT => -26
+		DEFAULT => -25
 	},
 	{#State 56
 		ACTIONS => {
@@ -983,9 +982,9 @@ sub new {
 	},
 	{#State 57
 		ACTIONS => {
-			".." => -217
+			".." => -216
 		},
-		DEFAULT => -23
+		DEFAULT => -22
 	},
 	{#State 58
 		ACTIONS => {
@@ -996,16 +995,16 @@ sub new {
 			"*" => 119,
 			"/" => 120
 		},
-		DEFAULT => -158
+		DEFAULT => -157
 	},
 	{#State 59
 		ACTIONS => {
 			"+" => 121
 		},
-		DEFAULT => -155
+		DEFAULT => -154
 	},
 	{#State 60
-		DEFAULT => -152
+		DEFAULT => -151
 	},
 	{#State 61
 		ACTIONS => {
@@ -1017,7 +1016,7 @@ sub new {
 		}
 	},
 	{#State 62
-		DEFAULT => -154
+		DEFAULT => -153
 	},
 	{#State 63
 		ACTIONS => {
@@ -1038,13 +1037,13 @@ sub new {
 		}
 	},
 	{#State 64
-		DEFAULT => -157
+		DEFAULT => -156
 	},
 	{#State 65
-		DEFAULT => -208
+		DEFAULT => -207
 	},
 	{#State 66
-		DEFAULT => -156
+		DEFAULT => -155
 	},
 	{#State 67
 		ACTIONS => {
@@ -1080,7 +1079,7 @@ sub new {
 		ACTIONS => {
 			"+" => 140
 		},
-		DEFAULT => -153
+		DEFAULT => -152
 	},
 	{#State 69
 		ACTIONS => {
@@ -1091,34 +1090,34 @@ sub new {
 		ACTIONS => {
 			"=" => 142
 		},
-		DEFAULT => -24
+		DEFAULT => -23
 	},
 	{#State 71
-		DEFAULT => -27
+		DEFAULT => -26
 	},
 	{#State 72
-		DEFAULT => -125,
+		DEFAULT => -124,
 		GOTOS => {
 			'@10-4' => 143
 		}
 	},
 	{#State 73
 		ACTIONS => {
-			"+" => 126,
-			"==" => 128,
-			"lte" => 127,
-			"!" => 129,
-			"*" => 130,
-			"[" => 131,
-			"lt" => 132,
 			"!=" => 133,
 			"?" => 134,
+			"+" => 126,
 			"gte" => 135,
+			"==" => 128,
+			"lte" => 127,
 			"??" => 136,
+			"!" => 129,
+			"*" => 130,
 			"gt" => 137,
-			"." => 138
+			"[" => 131,
+			"." => 138,
+			"lt" => 132
 		},
-		DEFAULT => -147,
+		DEFAULT => -146,
 		GOTOS => {
 			'@23-4' => 144
 		}
@@ -1161,7 +1160,7 @@ sub new {
 			"&&" => 148,
 			"||" => 147
 		},
-		DEFAULT => -136,
+		DEFAULT => -135,
 		GOTOS => {
 			'@18-4' => 149
 		}
@@ -1182,7 +1181,7 @@ sub new {
 			"gt" => 137,
 			"." => 138
 		},
-		DEFAULT => -36
+		DEFAULT => -35
 	},
 	{#State 77
 		ACTIONS => {
@@ -1227,13 +1226,13 @@ sub new {
 			"gt" => 159,
 			"lt" => 154
 		},
-		DEFAULT => -48
+		DEFAULT => -47
 	},
 	{#State 79
 		ACTIONS => {
 			"?" => 160
 		},
-		DEFAULT => -60
+		DEFAULT => -59
 	},
 	{#State 80
 		ACTIONS => {
@@ -1254,16 +1253,16 @@ sub new {
 			"&&" => 165,
 			"||" => 164
 		},
-		DEFAULT => -133,
+		DEFAULT => -132,
 		GOTOS => {
 			'@16-4' => 162
 		}
 	},
 	{#State 82
-		DEFAULT => -62
+		DEFAULT => -61
 	},
 	{#State 83
-		DEFAULT => -42
+		DEFAULT => -41
 	},
 	{#State 84
 		ACTIONS => {
@@ -1292,14 +1291,14 @@ sub new {
 		ACTIONS => {
 			'DATA_KEY' => 86
 		},
-		DEFAULT => -141,
+		DEFAULT => -140,
 		GOTOS => {
 			'expr_ftl_assignments' => 169,
 			'expr_ftl_assignment' => 87
 		}
 	},
 	{#State 88
-		DEFAULT => -139,
+		DEFAULT => -138,
 		GOTOS => {
 			'@20-4' => 170
 		}
@@ -1348,7 +1347,7 @@ sub new {
 		}
 	},
 	{#State 92
-		DEFAULT => -94
+		DEFAULT => -93
 	},
 	{#State 93
 		ACTIONS => {
@@ -1377,10 +1376,10 @@ sub new {
 		}
 	},
 	{#State 95
-		DEFAULT => -118
+		DEFAULT => -117
 	},
 	{#State 96
-		DEFAULT => -111,
+		DEFAULT => -110,
 		GOTOS => {
 			'@7-4' => 176
 		}
@@ -1389,23 +1388,23 @@ sub new {
 		ACTIONS => {
 			'DATA_KEY' => 95
 		},
-		DEFAULT => -116,
+		DEFAULT => -115,
 		GOTOS => {
 			'macroparams' => 177,
 			'macroparam' => 97
 		}
 	},
 	{#State 98
-		DEFAULT => -216
+		DEFAULT => -215
 	},
 	{#State 99
-		DEFAULT => -218
-	},
-	{#State 100
 		DEFAULT => -217
 	},
+	{#State 100
+		DEFAULT => -216
+	},
 	{#State 101
-		DEFAULT => -23
+		DEFAULT => -22
 	},
 	{#State 102
 		ACTIONS => {
@@ -1416,7 +1415,7 @@ sub new {
 			"*" => 119,
 			"/" => 120
 		},
-		DEFAULT => -32
+		DEFAULT => -31
 	},
 	{#State 103
 		ACTIONS => {
@@ -1441,10 +1440,10 @@ sub new {
 			"*" => 119,
 			"/" => 120
 		},
-		DEFAULT => -33
+		DEFAULT => -32
 	},
 	{#State 106
-		DEFAULT => -85
+		DEFAULT => -84
 	},
 	{#State 107
 		ACTIONS => {
@@ -1452,7 +1451,7 @@ sub new {
 		}
 	},
 	{#State 108
-		DEFAULT => -87
+		DEFAULT => -86
 	},
 	{#State 109
 		ACTIONS => {
@@ -1474,7 +1473,7 @@ sub new {
 		}
 	},
 	{#State 110
-		DEFAULT => -90
+		DEFAULT => -89
 	},
 	{#State 111
 		ACTIONS => {
@@ -1485,19 +1484,19 @@ sub new {
 			"^" => 118,
 			"*" => 119
 		},
-		DEFAULT => -86
+		DEFAULT => -85
 	},
 	{#State 112
 		ACTIONS => {
 			"+" => 121
 		},
-		DEFAULT => -206
+		DEFAULT => -205
 	},
 	{#State 113
 		ACTIONS => {
 			"," => 181
 		},
-		DEFAULT => -88
+		DEFAULT => -87
 	},
 	{#State 114
 		ACTIONS => {
@@ -1597,7 +1596,7 @@ sub new {
 		}
 	},
 	{#State 123
-		DEFAULT => -211
+		DEFAULT => -210
 	},
 	{#State 124
 		ACTIONS => {
@@ -1606,7 +1605,7 @@ sub new {
 		}
 	},
 	{#State 125
-		DEFAULT => -150
+		DEFAULT => -149
 	},
 	{#State 126
 		ACTIONS => {
@@ -1893,7 +1892,7 @@ sub new {
 		}
 	},
 	{#State 136
-		DEFAULT => -197
+		DEFAULT => -196
 	},
 	{#State 137
 		ACTIONS => {
@@ -1979,7 +1978,7 @@ sub new {
 		}
 	},
 	{#State 141
-		DEFAULT => -204
+		DEFAULT => -203
 	},
 	{#State 142
 		ACTIONS => {
@@ -1998,7 +1997,7 @@ sub new {
 		ACTIONS => {
 			'DATA_KEY' => 235
 		},
-		DEFAULT => -123,
+		DEFAULT => -122,
 		GOTOS => {
 			'macro_assignments' => 236,
 			'macro_assignment' => 237
@@ -2006,11 +2005,7 @@ sub new {
 	},
 	{#State 144
 		ACTIONS => {
-			"whitespace" => 19
-		},
-		DEFAULT => -19,
-		GOTOS => {
-			'whitespace' => 238
+			"/" => 238
 		}
 	},
 	{#State 145
@@ -2019,7 +2014,7 @@ sub new {
 			"&&" => 148,
 			"||" => 147
 		},
-		DEFAULT => -40
+		DEFAULT => -39
 	},
 	{#State 146
 		ACTIONS => {
@@ -2150,7 +2145,7 @@ sub new {
 			"gt" => 137,
 			"." => 138
 		},
-		DEFAULT => -36
+		DEFAULT => -35
 	},
 	{#State 152
 		ACTIONS => {
@@ -2220,7 +2215,7 @@ sub new {
 		}
 	},
 	{#State 157
-		DEFAULT => -59
+		DEFAULT => -58
 	},
 	{#State 158
 		ACTIONS => {
@@ -2284,7 +2279,7 @@ sub new {
 			"&&" => 165,
 			"||" => 164
 		},
-		DEFAULT => -45
+		DEFAULT => -44
 	},
 	{#State 162
 		ACTIONS => {
@@ -2380,7 +2375,7 @@ sub new {
 		}
 	},
 	{#State 169
-		DEFAULT => -142
+		DEFAULT => -141
 	},
 	{#State 170
 		ACTIONS => {
@@ -2406,25 +2401,25 @@ sub new {
 			"gt" => 137,
 			"." => 138
 		},
-		DEFAULT => -95
+		DEFAULT => -94
 	},
 	{#State 172
-		DEFAULT => -107,
+		DEFAULT => -106,
 		GOTOS => {
 			'@6-5' => 286
 		}
 	},
 	{#State 173
-		DEFAULT => -98,
+		DEFAULT => -97,
 		GOTOS => {
 			'@1-1' => 287
 		}
 	},
 	{#State 174
-		DEFAULT => -105
+		DEFAULT => -104
 	},
 	{#State 175
-		DEFAULT => -129,
+		DEFAULT => -128,
 		GOTOS => {
 			'@13-5' => 288
 		}
@@ -2438,10 +2433,10 @@ sub new {
 		}
 	},
 	{#State 177
-		DEFAULT => -117
+		DEFAULT => -116
 	},
 	{#State 178
-		DEFAULT => -215
+		DEFAULT => -214
 	},
 	{#State 179
 		ACTIONS => {
@@ -2449,7 +2444,7 @@ sub new {
 		}
 	},
 	{#State 180
-		DEFAULT => -91
+		DEFAULT => -90
 	},
 	{#State 181
 		ACTIONS => {
@@ -2479,7 +2474,7 @@ sub new {
 		}
 	},
 	{#State 183
-		DEFAULT => -213
+		DEFAULT => -212
 	},
 	{#State 184
 		ACTIONS => {
@@ -2488,7 +2483,7 @@ sub new {
 			"*" => 119,
 			"/" => 120
 		},
-		DEFAULT => -29
+		DEFAULT => -28
 	},
 	{#State 185
 		ACTIONS => {
@@ -2497,31 +2492,31 @@ sub new {
 			"*" => 119,
 			"/" => 120
 		},
-		DEFAULT => -28
+		DEFAULT => -27
 	},
 	{#State 186
 		ACTIONS => {
 			"^" => 118
 		},
-		DEFAULT => -35
+		DEFAULT => -34
 	},
 	{#State 187
-		DEFAULT => -34
+		DEFAULT => -33
 	},
 	{#State 188
 		ACTIONS => {
 			"^" => 118
 		},
-		DEFAULT => -30
+		DEFAULT => -29
 	},
 	{#State 189
 		ACTIONS => {
 			"^" => 118
 		},
-		DEFAULT => -31
+		DEFAULT => -30
 	},
 	{#State 190
-		DEFAULT => -209
+		DEFAULT => -208
 	},
 	{#State 191
 		ACTIONS => {
@@ -2545,7 +2540,7 @@ sub new {
 		}
 	},
 	{#State 192
-		DEFAULT => -205
+		DEFAULT => -204
 	},
 	{#State 193
 		ACTIONS => {
@@ -2569,7 +2564,7 @@ sub new {
 			"gt" => 137,
 			"." => 138
 		},
-		DEFAULT => -162
+		DEFAULT => -161
 	},
 	{#State 195
 		ACTIONS => {
@@ -2583,7 +2578,7 @@ sub new {
 			"??" => 136,
 			"gt" => undef
 		},
-		DEFAULT => -201
+		DEFAULT => -200
 	},
 	{#State 196
 		ACTIONS => {
@@ -2593,7 +2588,7 @@ sub new {
 			"?" => 134,
 			"??" => 136
 		},
-		DEFAULT => -195
+		DEFAULT => -194
 	},
 	{#State 197
 		ACTIONS => {
@@ -2611,7 +2606,7 @@ sub new {
 			"gt" => 137,
 			"." => 138
 		},
-		DEFAULT => -194
+		DEFAULT => -193
 	},
 	{#State 198
 		ACTIONS => {
@@ -2625,7 +2620,7 @@ sub new {
 			"??" => 136,
 			"gt" => 137
 		},
-		DEFAULT => -161
+		DEFAULT => -160
 	},
 	{#State 199
 		ACTIONS => {
@@ -2645,7 +2640,7 @@ sub new {
 		ACTIONS => {
 			"]" => 301
 		},
-		DEFAULT => -218
+		DEFAULT => -217
 	},
 	{#State 202
 		ACTIONS => {
@@ -2653,7 +2648,7 @@ sub new {
 		}
 	},
 	{#State 203
-		DEFAULT => -163
+		DEFAULT => -162
 	},
 	{#State 204
 		ACTIONS => {
@@ -2678,7 +2673,7 @@ sub new {
 			"??" => 136,
 			"gt" => undef
 		},
-		DEFAULT => -200
+		DEFAULT => -199
 	},
 	{#State 206
 		ACTIONS => {
@@ -2688,25 +2683,25 @@ sub new {
 			"?" => 134,
 			"??" => 136
 		},
-		DEFAULT => -196
+		DEFAULT => -195
 	},
 	{#State 207
-		DEFAULT => -176
+		DEFAULT => -175
 	},
 	{#State 208
-		DEFAULT => -171
+		DEFAULT => -170
 	},
 	{#State 209
-		DEFAULT => -183
+		DEFAULT => -182
 	},
 	{#State 210
-		DEFAULT => -192
+		DEFAULT => -191
 	},
 	{#State 211
 		ACTIONS => {
 			"(" => 304
 		},
-		DEFAULT => -187
+		DEFAULT => -186
 	},
 	{#State 212
 		ACTIONS => {
@@ -2714,10 +2709,10 @@ sub new {
 		}
 	},
 	{#State 213
-		DEFAULT => -184
+		DEFAULT => -183
 	},
 	{#State 214
-		DEFAULT => -181
+		DEFAULT => -180
 	},
 	{#State 215
 		ACTIONS => {
@@ -2725,10 +2720,10 @@ sub new {
 		}
 	},
 	{#State 216
-		DEFAULT => -185
+		DEFAULT => -184
 	},
 	{#State 217
-		DEFAULT => -182
+		DEFAULT => -181
 	},
 	{#State 218
 		ACTIONS => {
@@ -2741,16 +2736,16 @@ sub new {
 		}
 	},
 	{#State 220
-		DEFAULT => -191
+		DEFAULT => -190
 	},
 	{#State 221
-		DEFAULT => -179
-	},
-	{#State 222
 		DEFAULT => -178
 	},
+	{#State 222
+		DEFAULT => -177
+	},
 	{#State 223
-		DEFAULT => -193
+		DEFAULT => -192
 	},
 	{#State 224
 		ACTIONS => {
@@ -2758,7 +2753,7 @@ sub new {
 		}
 	},
 	{#State 225
-		DEFAULT => -177
+		DEFAULT => -176
 	},
 	{#State 226
 		ACTIONS => {
@@ -2766,10 +2761,10 @@ sub new {
 		}
 	},
 	{#State 227
-		DEFAULT => -172
+		DEFAULT => -171
 	},
 	{#State 228
-		DEFAULT => -180
+		DEFAULT => -179
 	},
 	{#State 229
 		ACTIONS => {
@@ -2783,7 +2778,7 @@ sub new {
 			"??" => 136,
 			"gt" => undef
 		},
-		DEFAULT => -199
+		DEFAULT => -198
 	},
 	{#State 230
 		ACTIONS => {
@@ -2797,13 +2792,13 @@ sub new {
 			"??" => 136,
 			"gt" => undef
 		},
-		DEFAULT => -198
+		DEFAULT => -197
 	},
 	{#State 231
-		DEFAULT => -159
+		DEFAULT => -158
 	},
 	{#State 232
-		DEFAULT => -160
+		DEFAULT => -159
 	},
 	{#State 233
 		ACTIONS => {
@@ -2819,10 +2814,10 @@ sub new {
 			"gt" => 137,
 			"." => 138
 		},
-		DEFAULT => -203
+		DEFAULT => -202
 	},
 	{#State 234
-		DEFAULT => -25
+		DEFAULT => -24
 	},
 	{#State 235
 		ACTIONS => {
@@ -2830,7 +2825,7 @@ sub new {
 		}
 	},
 	{#State 236
-		DEFAULT => -126,
+		DEFAULT => -125,
 		GOTOS => {
 			'@11-6' => 312
 		}
@@ -2839,7 +2834,7 @@ sub new {
 		ACTIONS => {
 			'DATA_KEY' => 235
 		},
-		DEFAULT => -120,
+		DEFAULT => -119,
 		GOTOS => {
 			'macro_assignments' => 313,
 			'macro_assignment' => 237
@@ -2847,7 +2842,7 @@ sub new {
 	},
 	{#State 238
 		ACTIONS => {
-			"/" => 314
+			">" => 314
 		}
 	},
 	{#State 239
@@ -2856,22 +2851,22 @@ sub new {
 			"&&" => 148,
 			"||" => 147
 		},
-		DEFAULT => -39
+		DEFAULT => -38
 	},
 	{#State 240
-		DEFAULT => -38
+		DEFAULT => -37
 	},
 	{#State 241
 		ACTIONS => {
 			"||" => 147
 		},
-		DEFAULT => -37
+		DEFAULT => -36
 	},
 	{#State 242
-		DEFAULT => -137
+		DEFAULT => -136
 	},
 	{#State 243
-		DEFAULT => -41
+		DEFAULT => -40
 	},
 	{#State 244
 		ACTIONS => {
@@ -2882,10 +2877,10 @@ sub new {
 			"^" => 118,
 			"*" => 119
 		},
-		DEFAULT => -54
+		DEFAULT => -53
 	},
 	{#State 245
-		DEFAULT => -52
+		DEFAULT => -51
 	},
 	{#State 246
 		ACTIONS => {
@@ -2896,7 +2891,7 @@ sub new {
 			"^" => 118,
 			"*" => 119
 		},
-		DEFAULT => -50
+		DEFAULT => -49
 	},
 	{#State 247
 		ACTIONS => {
@@ -2907,10 +2902,10 @@ sub new {
 			"^" => 118,
 			"*" => 119
 		},
-		DEFAULT => -56
+		DEFAULT => -55
 	},
 	{#State 248
-		DEFAULT => -58
+		DEFAULT => -57
 	},
 	{#State 249
 		ACTIONS => {
@@ -2921,7 +2916,7 @@ sub new {
 			"^" => 118,
 			"*" => 119
 		},
-		DEFAULT => -57
+		DEFAULT => -56
 	},
 	{#State 250
 		ACTIONS => {
@@ -2932,10 +2927,10 @@ sub new {
 			"^" => 118,
 			"*" => 119
 		},
-		DEFAULT => -53
+		DEFAULT => -52
 	},
 	{#State 251
-		DEFAULT => -51
+		DEFAULT => -50
 	},
 	{#State 252
 		ACTIONS => {
@@ -2946,7 +2941,7 @@ sub new {
 			"^" => 118,
 			"*" => 119
 		},
-		DEFAULT => -49
+		DEFAULT => -48
 	},
 	{#State 253
 		ACTIONS => {
@@ -2957,88 +2952,87 @@ sub new {
 			"^" => 118,
 			"*" => 119
 		},
-		DEFAULT => -55
+		DEFAULT => -54
 	},
 	{#State 254
-		DEFAULT => -81
-	},
-	{#State 255
-		DEFAULT => -77
-	},
-	{#State 256
-		DEFAULT => -71
-	},
-	{#State 257
-		DEFAULT => -68
-	},
-	{#State 258
-		DEFAULT => -67
-	},
-	{#State 259
-		DEFAULT => -64
-	},
-	{#State 260
-		DEFAULT => -70
-	},
-	{#State 261
-		DEFAULT => -73
-	},
-	{#State 262
 		DEFAULT => -80
 	},
-	{#State 263
-		DEFAULT => -69
-	},
-	{#State 264
-		DEFAULT => -72
-	},
-	{#State 265
-		DEFAULT => -66
-	},
-	{#State 266
-		DEFAULT => -83
-	},
-	{#State 267
-		DEFAULT => -84
-	},
-	{#State 268
-		DEFAULT => -75
-	},
-	{#State 269
-		DEFAULT => -65
-	},
-	{#State 270
-		DEFAULT => -79
-	},
-	{#State 271
-		DEFAULT => -63
-	},
-	{#State 272
-		DEFAULT => -82
-	},
-	{#State 273
+	{#State 255
 		DEFAULT => -76
 	},
-	{#State 274
-		DEFAULT => -78
+	{#State 256
+		DEFAULT => -70
 	},
-	{#State 275
+	{#State 257
+		DEFAULT => -67
+	},
+	{#State 258
+		DEFAULT => -66
+	},
+	{#State 259
+		DEFAULT => -63
+	},
+	{#State 260
+		DEFAULT => -69
+	},
+	{#State 261
+		DEFAULT => -72
+	},
+	{#State 262
+		DEFAULT => -79
+	},
+	{#State 263
+		DEFAULT => -68
+	},
+	{#State 264
+		DEFAULT => -71
+	},
+	{#State 265
+		DEFAULT => -65
+	},
+	{#State 266
+		DEFAULT => -82
+	},
+	{#State 267
+		DEFAULT => -83
+	},
+	{#State 268
 		DEFAULT => -74
 	},
+	{#State 269
+		DEFAULT => -64
+	},
+	{#State 270
+		DEFAULT => -78
+	},
+	{#State 271
+		DEFAULT => -62
+	},
+	{#State 272
+		DEFAULT => -81
+	},
+	{#State 273
+		DEFAULT => -75
+	},
+	{#State 274
+		DEFAULT => -77
+	},
+	{#State 275
+		DEFAULT => -73
+	},
 	{#State 276
-		DEFAULT => -61
+		DEFAULT => -60
 	},
 	{#State 277
 		ACTIONS => {
-			'variable_verbatim' => 15,
-			'string' => 8,
 			'tag_else' => 9,
 			"<#" => 10,
 			"whitespace" => 19,
-			"<\@" => -19,
+			'variable_verbatim' => 15,
+			'string' => 8,
 			"\${" => 21
 		},
-		DEFAULT => -3,
+		DEFAULT => -18,
 		GOTOS => {
 			'tag_assign' => 3,
 			'tag_ftl' => 2,
@@ -3063,25 +3057,25 @@ sub new {
 			"&&" => 165,
 			"||" => 164
 		},
-		DEFAULT => -46
+		DEFAULT => -45
 	},
 	{#State 279
-		DEFAULT => -44
+		DEFAULT => -43
 	},
 	{#State 280
 		ACTIONS => {
 			"||" => 164
 		},
-		DEFAULT => -43
+		DEFAULT => -42
 	},
 	{#State 281
-		DEFAULT => -47
+		DEFAULT => -46
 	},
 	{#State 282
-		DEFAULT => -145
+		DEFAULT => -144
 	},
 	{#State 283
-		DEFAULT => -102,
+		DEFAULT => -101,
 		GOTOS => {
 			'@3-1' => 316
 		}
@@ -3102,10 +3096,10 @@ sub new {
 			"gt" => 137,
 			"." => 138
 		},
-		DEFAULT => -143
+		DEFAULT => -142
 	},
 	{#State 285
-		DEFAULT => -140
+		DEFAULT => -139
 	},
 	{#State 286
 		ACTIONS => {
@@ -3113,7 +3107,7 @@ sub new {
 		}
 	},
 	{#State 287
-		DEFAULT => -99,
+		DEFAULT => -98,
 		GOTOS => {
 			'@2-2' => 318
 		}
@@ -3124,13 +3118,13 @@ sub new {
 		}
 	},
 	{#State 289
-		DEFAULT => -112,
+		DEFAULT => -111,
 		GOTOS => {
 			'@8-6' => 320
 		}
 	},
 	{#State 290
-		DEFAULT => -219
+		DEFAULT => -218
 	},
 	{#State 291
 		ACTIONS => {
@@ -3141,16 +3135,16 @@ sub new {
 		}
 	},
 	{#State 292
-		DEFAULT => -89
+		DEFAULT => -88
 	},
 	{#State 293
 		ACTIONS => {
 			"+" => 121
 		},
-		DEFAULT => -207
+		DEFAULT => -206
 	},
 	{#State 294
-		DEFAULT => -22
+		DEFAULT => -21
 	},
 	{#State 295
 		ACTIONS => {
@@ -3161,16 +3155,16 @@ sub new {
 			"^" => 118,
 			"*" => 119
 		},
-		DEFAULT => -21
-	},
-	{#State 296
-		DEFAULT => -210
-	},
-	{#State 297
 		DEFAULT => -20
 	},
+	{#State 296
+		DEFAULT => -209
+	},
+	{#State 297
+		DEFAULT => -19
+	},
 	{#State 298
-		DEFAULT => -212
+		DEFAULT => -211
 	},
 	{#State 299
 		ACTIONS => {
@@ -3188,13 +3182,13 @@ sub new {
 		}
 	},
 	{#State 301
-		DEFAULT => -169
-	},
-	{#State 302
 		DEFAULT => -168
 	},
+	{#State 302
+		DEFAULT => -167
+	},
 	{#State 303
-		DEFAULT => -164
+		DEFAULT => -163
 	},
 	{#State 304
 		ACTIONS => {
@@ -3315,45 +3309,43 @@ sub new {
 		}
 	},
 	{#State 313
-		DEFAULT => -121
+		DEFAULT => -120
 	},
 	{#State 314
-		ACTIONS => {
-			">" => 334
-		}
+		DEFAULT => -147
 	},
 	{#State 315
 		ACTIONS => {
-			"</#" => 335
+			"</#" => 334
 		},
 		GOTOS => {
-			'tag_close_start' => 336
+			'tag_close_start' => 335
 		}
 	},
 	{#State 316
 		ACTIONS => {
 			"whitespace" => 19
 		},
-		DEFAULT => -19,
+		DEFAULT => -18,
 		GOTOS => {
-			'whitespace' => 337
+			'whitespace' => 336
 		}
 	},
 	{#State 317
 		ACTIONS => {
-			"</#" => 335
+			"</#" => 334
 		},
 		GOTOS => {
-			'tag_close_start' => 338
+			'tag_close_start' => 337
 		}
 	},
 	{#State 318
 		ACTIONS => {
 			"whitespace" => 19
 		},
-		DEFAULT => -19,
+		DEFAULT => -18,
 		GOTOS => {
-			'whitespace' => 339
+			'whitespace' => 338
 		}
 	},
 	{#State 319
@@ -3361,20 +3353,19 @@ sub new {
 			">" => 173
 		},
 		GOTOS => {
-			'tag_open_end' => 340
+			'tag_open_end' => 339
 		}
 	},
 	{#State 320
 		ACTIONS => {
-			'variable_verbatim' => 15,
-			'string' => 8,
 			'tag_else' => 9,
 			"<#" => 10,
 			"whitespace" => 19,
-			"<\@" => -19,
+			'variable_verbatim' => 15,
+			'string' => 8,
 			"\${" => 21
 		},
-		DEFAULT => -3,
+		DEFAULT => -18,
 		GOTOS => {
 			'tag_assign' => 3,
 			'tag_ftl' => 2,
@@ -3385,7 +3376,7 @@ sub new {
 			'tag_list' => 6,
 			'tag_if' => 17,
 			'tag_dump' => 18,
-			'content' => 341,
+			'content' => 340,
 			'tag_macro' => 11,
 			'tag_open_start' => 20,
 			'tag_macro_call' => 12,
@@ -3394,53 +3385,53 @@ sub new {
 		}
 	},
 	{#State 321
-		DEFAULT => -92
+		DEFAULT => -91
 	},
 	{#State 322
-		DEFAULT => -167
+		DEFAULT => -166
 	},
 	{#State 323
 		ACTIONS => {
-			"]" => 342
+			"]" => 341
 		}
 	},
 	{#State 324
-		DEFAULT => -166
+		DEFAULT => -165
 	},
 	{#State 325
 		ACTIONS => {
-			"," => 343
+			"," => 342
 		}
 	},
 	{#State 326
 		ACTIONS => {
-			"," => 344
+			"," => 343
 		}
 	},
 	{#State 327
 		ACTIONS => {
-			")" => 345
+			")" => 344
 		}
 	},
 	{#State 328
 		ACTIONS => {
-			"," => 346,
-			")" => 347
+			"," => 345,
+			")" => 346
 		}
 	},
 	{#State 329
 		ACTIONS => {
-			")" => 348
+			")" => 347
 		}
 	},
 	{#State 330
 		ACTIONS => {
-			")" => 349
+			")" => 348
 		}
 	},
 	{#State 331
 		ACTIONS => {
-			")" => 350
+			")" => 349
 		}
 	},
 	{#State 332
@@ -3459,57 +3450,59 @@ sub new {
 			"gt" => 137,
 			"." => 138
 		},
-		DEFAULT => -122
+		DEFAULT => -121
 	},
 	{#State 333
 		ACTIONS => {
 			">" => 173
 		},
 		GOTOS => {
-			'tag_open_end' => 351
+			'tag_open_end' => 350
 		}
 	},
 	{#State 334
-		DEFAULT => -148
-	},
-	{#State 335
-		DEFAULT => -101
-	},
-	{#State 336
-		ACTIONS => {
-			"if" => 352
-		}
-	},
-	{#State 337
-		DEFAULT => -103
-	},
-	{#State 338
-		ACTIONS => {
-			"assign" => 354
-		},
-		GOTOS => {
-			'directive_assign_end' => 353
-		}
-	},
-	{#State 339
 		DEFAULT => -100
 	},
-	{#State 340
-		DEFAULT => -130,
+	{#State 335
+		ACTIONS => {
+			"if" => 351
+		}
+	},
+	{#State 336
+		DEFAULT => -102
+	},
+	{#State 337
+		ACTIONS => {
+			"assign" => 353
+		},
 		GOTOS => {
-			'@14-8' => 355
+			'directive_assign_end' => 352
+		}
+	},
+	{#State 338
+		DEFAULT => -99
+	},
+	{#State 339
+		DEFAULT => -129,
+		GOTOS => {
+			'@14-8' => 354
+		}
+	},
+	{#State 340
+		ACTIONS => {
+			"</#" => 334
+		},
+		GOTOS => {
+			'tag_close_start' => 355
 		}
 	},
 	{#State 341
-		ACTIONS => {
-			"</#" => 335
-		},
-		GOTOS => {
-			'tag_close_start' => 356
-		}
+		DEFAULT => -164
 	},
 	{#State 342
-		DEFAULT => -165
+		ACTIONS => {
+			'string' => 356
+		}
 	},
 	{#State 343
 		ACTIONS => {
@@ -3517,32 +3510,35 @@ sub new {
 		}
 	},
 	{#State 344
-		ACTIONS => {
-			'string' => 358
-		}
-	},
-	{#State 345
-		DEFAULT => -175
-	},
-	{#State 346
-		ACTIONS => {
-			'NUMBER' => 359
-		}
-	},
-	{#State 347
-		DEFAULT => -189
-	},
-	{#State 348
-		DEFAULT => -170
-	},
-	{#State 349
 		DEFAULT => -174
 	},
-	{#State 350
+	{#State 345
+		ACTIONS => {
+			'NUMBER' => 358
+		}
+	},
+	{#State 346
+		DEFAULT => -188
+	},
+	{#State 347
+		DEFAULT => -169
+	},
+	{#State 348
 		DEFAULT => -173
 	},
+	{#State 349
+		DEFAULT => -172
+	},
+	{#State 350
+		DEFAULT => -126
+	},
 	{#State 351
-		DEFAULT => -127
+		ACTIONS => {
+			">" => 283
+		},
+		GOTOS => {
+			'tag_close_end' => 359
+		}
 	},
 	{#State 352
 		ACTIONS => {
@@ -3553,27 +3549,18 @@ sub new {
 		}
 	},
 	{#State 353
-		ACTIONS => {
-			">" => 283
-		},
-		GOTOS => {
-			'tag_close_end' => 361
-		}
+		DEFAULT => -109
 	},
 	{#State 354
-		DEFAULT => -110
-	},
-	{#State 355
 		ACTIONS => {
-			'variable_verbatim' => 15,
-			'string' => 8,
 			'tag_else' => 9,
 			"<#" => 10,
 			"whitespace" => 19,
-			"<\@" => -19,
+			'variable_verbatim' => 15,
+			'string' => 8,
 			"\${" => 21
 		},
-		DEFAULT => -3,
+		DEFAULT => -18,
 		GOTOS => {
 			'tag_assign' => 3,
 			'tag_ftl' => 2,
@@ -3584,7 +3571,7 @@ sub new {
 			'tag_list' => 6,
 			'tag_if' => 17,
 			'tag_dump' => 18,
-			'content' => 362,
+			'content' => 361,
 			'tag_macro' => 11,
 			'tag_open_start' => 20,
 			'tag_macro_call' => 12,
@@ -3592,12 +3579,17 @@ sub new {
 			'tag_comment' => 14
 		}
 	},
-	{#State 356
+	{#State 355
 		ACTIONS => {
-			"macro" => 364
+			"macro" => 363
 		},
 		GOTOS => {
-			'directive_macro_end' => 363
+			'directive_macro_end' => 362
+		}
+	},
+	{#State 356
+		ACTIONS => {
+			")" => 364
 		}
 	},
 	{#State 357
@@ -3611,62 +3603,57 @@ sub new {
 		}
 	},
 	{#State 359
-		ACTIONS => {
-			")" => 367
-		}
+		DEFAULT => -133
 	},
 	{#State 360
-		DEFAULT => -134
+		DEFAULT => -107
 	},
 	{#State 361
-		DEFAULT => -108
+		ACTIONS => {
+			"</#" => 334
+		},
+		GOTOS => {
+			'tag_close_start' => 367
+		}
 	},
 	{#State 362
 		ACTIONS => {
-			"</#" => 335
+			">" => 283
 		},
 		GOTOS => {
-			'tag_close_start' => 368
+			'tag_close_end' => 368
 		}
 	},
 	{#State 363
-		ACTIONS => {
-			">" => 283
-		},
-		GOTOS => {
-			'tag_close_end' => 369
-		}
+		DEFAULT => -114
 	},
 	{#State 364
-		DEFAULT => -115
+		DEFAULT => -187
 	},
 	{#State 365
-		DEFAULT => -188
+		DEFAULT => -185
 	},
 	{#State 366
-		DEFAULT => -186
+		DEFAULT => -189
 	},
 	{#State 367
-		DEFAULT => -190
-	},
-	{#State 368
 		ACTIONS => {
-			"list" => 370
+			"list" => 369
 		}
 	},
-	{#State 369
-		DEFAULT => -113
+	{#State 368
+		DEFAULT => -112
 	},
-	{#State 370
+	{#State 369
 		ACTIONS => {
 			">" => 283
 		},
 		GOTOS => {
-			'tag_close_end' => 371
+			'tag_close_end' => 370
 		}
 	},
-	{#State 371
-		DEFAULT => -131
+	{#State 370
+		DEFAULT => -130
 	}
 ],
                                   yyrules  =>
@@ -3688,7 +3675,7 @@ sub
 							}
 	],
 	[#Rule 3
-		 'content', 0, undef
+		 'content_item', 1, undef
 	],
 	[#Rule 4
 		 'content_item', 1, undef
@@ -3700,19 +3687,19 @@ sub
 		 'content_item', 1, undef
 	],
 	[#Rule 7
-		 'content_item', 1, undef
+		 'tag', 1,
+sub
+#line 62 "FreeMarkerGrammar.yp"
+{ '' }
 	],
 	[#Rule 8
 		 'tag', 1,
 sub
-#line 64 "FreeMarkerGrammar.yp"
+#line 65 "FreeMarkerGrammar.yp"
 { '' }
 	],
 	[#Rule 9
-		 'tag', 1,
-sub
-#line 67 "FreeMarkerGrammar.yp"
-{ '' }
+		 'tag', 1, undef
 	],
 	[#Rule 10
 		 'tag', 1, undef
@@ -3736,255 +3723,255 @@ sub
 		 'tag', 1, undef
 	],
 	[#Rule 17
-		 'tag', 1, undef
-	],
-	[#Rule 18
 		 'whitespace', 1, undef
 	],
-	[#Rule 19
+	[#Rule 18
 		 'whitespace', 0, undef
 	],
-	[#Rule 20
+	[#Rule 19
 		 'value', 1,
 sub
-#line 92 "FreeMarkerGrammar.yp"
+#line 90 "FreeMarkerGrammar.yp"
 { $_[1] }
 	],
-	[#Rule 21
+	[#Rule 20
 		 'value', 1, undef
 	],
-	[#Rule 22
+	[#Rule 21
 		 'value', 1,
 sub
-#line 97 "FreeMarkerGrammar.yp"
+#line 95 "FreeMarkerGrammar.yp"
 { $_[1] }
 	],
-	[#Rule 23
+	[#Rule 22
 		 'exp', 1, undef
 	],
-	[#Rule 24
+	[#Rule 23
 		 'exp', 1,
 sub
-#line 103 "FreeMarkerGrammar.yp"
+#line 101 "FreeMarkerGrammar.yp"
 { $_[0]->data( $_[1] ) }
 	],
-	[#Rule 25
+	[#Rule 24
 		 'exp', 3,
 sub
-#line 106 "FreeMarkerGrammar.yp"
+#line 104 "FreeMarkerGrammar.yp"
 {
 								$_[0]->_storeData( $_[1], $_[3] );
 							}
 	],
+	[#Rule 25
+		 'exp', 1,
+sub
+#line 109 "FreeMarkerGrammar.yp"
+{ 1 }
+	],
 	[#Rule 26
 		 'exp', 1,
 sub
-#line 111 "FreeMarkerGrammar.yp"
-{ 1 }
+#line 112 "FreeMarkerGrammar.yp"
+{ 0 }
 	],
 	[#Rule 27
-		 'exp', 1,
+		 'exp', 3,
 sub
 #line 114 "FreeMarkerGrammar.yp"
-{ 0 }
+{ $_[1] + $_[3] }
 	],
 	[#Rule 28
 		 'exp', 3,
 sub
 #line 116 "FreeMarkerGrammar.yp"
-{ $_[1] + $_[3] }
+{ $_[1] - $_[3] }
 	],
 	[#Rule 29
 		 'exp', 3,
 sub
 #line 118 "FreeMarkerGrammar.yp"
-{ $_[1] - $_[3] }
+{ $_[1] * $_[3] }
 	],
 	[#Rule 30
 		 'exp', 3,
 sub
 #line 120 "FreeMarkerGrammar.yp"
-{ $_[1] * $_[3] }
+{ $_[1] / $_[3] }
 	],
 	[#Rule 31
-		 'exp', 3,
+		 'exp', 2,
 sub
 #line 122 "FreeMarkerGrammar.yp"
-{ $_[1] / $_[3] }
+{ -$_[2] }
 	],
 	[#Rule 32
 		 'exp', 2,
 sub
 #line 124 "FreeMarkerGrammar.yp"
-{ -$_[2] }
+{ $_[2] }
 	],
 	[#Rule 33
-		 'exp', 2,
+		 'exp', 3,
 sub
 #line 126 "FreeMarkerGrammar.yp"
-{ $_[2] }
+{ $_[1] ** $_[3] }
 	],
 	[#Rule 34
 		 'exp', 3,
 sub
-#line 128 "FreeMarkerGrammar.yp"
-{ $_[1] ** $_[3] }
-	],
-	[#Rule 35
-		 'exp', 3,
-sub
-#line 132 "FreeMarkerGrammar.yp"
+#line 130 "FreeMarkerGrammar.yp"
 { $_[1] % $_[3] }
 	],
-	[#Rule 36
+	[#Rule 35
 		 'exp_logic', 1, undef
+	],
+	[#Rule 36
+		 'exp_logic', 3,
+sub
+#line 136 "FreeMarkerGrammar.yp"
+{ $_[1] && $_[3] }
 	],
 	[#Rule 37
 		 'exp_logic', 3,
 sub
-#line 138 "FreeMarkerGrammar.yp"
-{ $_[1] && $_[3] }
+#line 139 "FreeMarkerGrammar.yp"
+{ $_[1] || $_[3] }
 	],
 	[#Rule 38
 		 'exp_logic', 3,
 sub
-#line 141 "FreeMarkerGrammar.yp"
-{ $_[1] || $_[3] }
-	],
-	[#Rule 39
-		 'exp_logic', 3,
-sub
-#line 144 "FreeMarkerGrammar.yp"
+#line 142 "FreeMarkerGrammar.yp"
 { $_[1] && !$_[3] }
 	],
-	[#Rule 40
+	[#Rule 39
 		 'exp_logic', 2,
 sub
-#line 147 "FreeMarkerGrammar.yp"
+#line 145 "FreeMarkerGrammar.yp"
 { !$_[2] }
 	],
-	[#Rule 41
+	[#Rule 40
 		 'exp_logic', 3,
 sub
-#line 150 "FreeMarkerGrammar.yp"
+#line 148 "FreeMarkerGrammar.yp"
 { $_[2] }
 	],
-	[#Rule 42
+	[#Rule 41
 		 'exp_logic_unexpanded', 1, undef
+	],
+	[#Rule 42
+		 'exp_logic_unexpanded', 3,
+sub
+#line 154 "FreeMarkerGrammar.yp"
+{ "$_[1] && $_[3]" }
 	],
 	[#Rule 43
 		 'exp_logic_unexpanded', 3,
 sub
-#line 156 "FreeMarkerGrammar.yp"
-{ "$_[1] && $_[3]" }
-	],
-	[#Rule 44
-		 'exp_logic_unexpanded', 3,
-sub
-#line 159 "FreeMarkerGrammar.yp"
+#line 157 "FreeMarkerGrammar.yp"
 { "$_[1] || $_[3]" }
 	],
-	[#Rule 45
+	[#Rule 44
 		 'exp_logic_unexpanded', 2,
 sub
-#line 162 "FreeMarkerGrammar.yp"
+#line 160 "FreeMarkerGrammar.yp"
 { "!$_[2]" }
+	],
+	[#Rule 45
+		 'exp_logic_unexpanded', 3,
+sub
+#line 163 "FreeMarkerGrammar.yp"
+{ "$_[1] && !$_[3]" }
 	],
 	[#Rule 46
 		 'exp_logic_unexpanded', 3,
 sub
-#line 165 "FreeMarkerGrammar.yp"
-{ "$_[1] && !$_[3]" }
-	],
-	[#Rule 47
-		 'exp_logic_unexpanded', 3,
-sub
-#line 168 "FreeMarkerGrammar.yp"
+#line 166 "FreeMarkerGrammar.yp"
 { "($_[2])" }
 	],
-	[#Rule 48
+	[#Rule 47
 		 'exp_condition_unexpanded', 1, undef
+	],
+	[#Rule 48
+		 'exp_condition_unexpanded', 3,
+sub
+#line 172 "FreeMarkerGrammar.yp"
+{ "$_[1] == $_[3]" }
 	],
 	[#Rule 49
 		 'exp_condition_unexpanded', 3,
 sub
-#line 174 "FreeMarkerGrammar.yp"
+#line 175 "FreeMarkerGrammar.yp"
 { "$_[1] == $_[3]" }
 	],
 	[#Rule 50
 		 'exp_condition_unexpanded', 3,
 sub
-#line 177 "FreeMarkerGrammar.yp"
-{ "$_[1] == $_[3]" }
+#line 178 "FreeMarkerGrammar.yp"
+{ "$_[1] = $_[3]" }
 	],
 	[#Rule 51
 		 'exp_condition_unexpanded', 3,
 sub
-#line 180 "FreeMarkerGrammar.yp"
-{ "$_[1] = $_[3]" }
+#line 181 "FreeMarkerGrammar.yp"
+{ "$_[1] == $_[3]" }
 	],
 	[#Rule 52
 		 'exp_condition_unexpanded', 3,
 sub
-#line 183 "FreeMarkerGrammar.yp"
-{ "$_[1] == $_[3]" }
+#line 184 "FreeMarkerGrammar.yp"
+{ "$_[1] gte $_[3]" }
 	],
 	[#Rule 53
 		 'exp_condition_unexpanded', 3,
 sub
-#line 186 "FreeMarkerGrammar.yp"
-{ "$_[1] gte $_[3]" }
+#line 187 "FreeMarkerGrammar.yp"
+{ "$_[1] lte $_[3]" }
 	],
 	[#Rule 54
 		 'exp_condition_unexpanded', 3,
 sub
-#line 189 "FreeMarkerGrammar.yp"
-{ "$_[1] lte $_[3]" }
+#line 190 "FreeMarkerGrammar.yp"
+{ "$_[1] gt $_[3]" }
 	],
 	[#Rule 55
 		 'exp_condition_unexpanded', 3,
 sub
-#line 192 "FreeMarkerGrammar.yp"
-{ "$_[1] gt $_[3]" }
+#line 193 "FreeMarkerGrammar.yp"
+{ "$_[1] lt $_[3]" }
 	],
 	[#Rule 56
 		 'exp_condition_unexpanded', 3,
 sub
-#line 195 "FreeMarkerGrammar.yp"
-{ "$_[1] lt $_[3]" }
+#line 196 "FreeMarkerGrammar.yp"
+{ "$_[1] != $_[3]" }
 	],
 	[#Rule 57
 		 'exp_condition_unexpanded', 3,
 sub
-#line 198 "FreeMarkerGrammar.yp"
+#line 199 "FreeMarkerGrammar.yp"
 { "$_[1] != $_[3]" }
 	],
 	[#Rule 58
-		 'exp_condition_unexpanded', 3,
-sub
-#line 201 "FreeMarkerGrammar.yp"
-{ "$_[1] != $_[3]" }
-	],
-	[#Rule 59
 		 'exp_condition_unexpanded', 2,
 sub
-#line 204 "FreeMarkerGrammar.yp"
+#line 202 "FreeMarkerGrammar.yp"
 { "$_[1]??" }
 	],
-	[#Rule 60
+	[#Rule 59
 		 'exp_condition_var_unexpanded', 1,
 sub
-#line 208 "FreeMarkerGrammar.yp"
+#line 206 "FreeMarkerGrammar.yp"
 { "$_[1]" }
 	],
-	[#Rule 61
+	[#Rule 60
 		 'exp_condition_var_unexpanded', 3,
 sub
-#line 211 "FreeMarkerGrammar.yp"
+#line 209 "FreeMarkerGrammar.yp"
 { "$_[1]?$_[3]" }
 	],
-	[#Rule 62
+	[#Rule 61
 		 'exp_condition_var_unexpanded', 1, undef
+	],
+	[#Rule 62
+		 'op', 1, undef
 	],
 	[#Rule 63
 		 'op', 1, undef
@@ -4050,7 +4037,7 @@ sub
 		 'op', 1, undef
 	],
 	[#Rule 84
-		 'op', 1, undef
+		 'sequence_item', 1, undef
 	],
 	[#Rule 85
 		 'sequence_item', 1, undef
@@ -4059,15 +4046,12 @@ sub
 		 'sequence_item', 1, undef
 	],
 	[#Rule 87
-		 'sequence_item', 1, undef
-	],
-	[#Rule 88
 		 'sequence', 1, undef
 	],
-	[#Rule 89
+	[#Rule 88
 		 'sequence', 3,
 sub
-#line 233 "FreeMarkerGrammar.yp"
+#line 231 "FreeMarkerGrammar.yp"
 {
 								my $seq = '';
 								$seq .= $_[1] if defined $_[1];
@@ -4076,141 +4060,141 @@ sub
 								return $seq;
 							}
 	],
-	[#Rule 90
+	[#Rule 89
 		 'array_str', 2,
 sub
-#line 242 "FreeMarkerGrammar.yp"
+#line 240 "FreeMarkerGrammar.yp"
 { '' }
 	],
-	[#Rule 91
+	[#Rule 90
 		 'array_str', 3,
 sub
-#line 245 "FreeMarkerGrammar.yp"
+#line 243 "FreeMarkerGrammar.yp"
 { "[$_[2]]" }
 	],
-	[#Rule 92
+	[#Rule 91
 		 'array_str', 5,
 sub
-#line 248 "FreeMarkerGrammar.yp"
+#line 246 "FreeMarkerGrammar.yp"
 {
 								(my $items = $_[5]) =~ s/^\[(.*)\]$/$1/;
 								return "[$_[2], $items]";
 							}
 	],
-	[#Rule 93
+	[#Rule 92
 		 'expr_assignments', 1, undef
 	],
-	[#Rule 94
+	[#Rule 93
 		 'expr_assignments', 2, undef
 	],
-	[#Rule 95
+	[#Rule 94
 		 'expr_assignment', 3,
 sub
-#line 260 "FreeMarkerGrammar.yp"
+#line 258 "FreeMarkerGrammar.yp"
 {
 								$_[0]->_storeData( $_[1], $_[3] );
 							}
 	],
-	[#Rule 96
+	[#Rule 95
 		 'tag_open_start', 1,
 sub
-#line 267 "FreeMarkerGrammar.yp"
+#line 265 "FreeMarkerGrammar.yp"
+{ $_[0]->_pushContext('tagParams') }
+	],
+	[#Rule 96
+		 'tag_macro_open_start', 1,
+sub
+#line 269 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext('tagParams') }
 	],
 	[#Rule 97
-		 'tag_macro_open_start', 1,
-sub
-#line 271 "FreeMarkerGrammar.yp"
-{ $_[0]->_pushContext('tagParams') }
-	],
-	[#Rule 98
 		 '@1-1', 0,
 sub
-#line 276 "FreeMarkerGrammar.yp"
+#line 274 "FreeMarkerGrammar.yp"
 { $_[0]->_popContext('tagParams') }
 	],
-	[#Rule 99
+	[#Rule 98
 		 '@2-2', 0,
 sub
-#line 277 "FreeMarkerGrammar.yp"
+#line 275 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext('whitespace') }
 	],
-	[#Rule 100
+	[#Rule 99
 		 'tag_open_end', 4,
 sub
-#line 279 "FreeMarkerGrammar.yp"
+#line 277 "FreeMarkerGrammar.yp"
 { $_[0]->_popContext('whitespace') }
 	],
-	[#Rule 101
+	[#Rule 100
 		 'tag_close_start', 1, undef
 	],
-	[#Rule 102
+	[#Rule 101
 		 '@3-1', 0,
 sub
-#line 287 "FreeMarkerGrammar.yp"
+#line 285 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext('whitespace') }
 	],
-	[#Rule 103
+	[#Rule 102
 		 'tag_close_end', 3,
 sub
-#line 289 "FreeMarkerGrammar.yp"
+#line 287 "FreeMarkerGrammar.yp"
 { $_[0]->_popContext('whitespace') }
 	],
-	[#Rule 104
+	[#Rule 103
 		 '@4-3', 0,
 sub
-#line 297 "FreeMarkerGrammar.yp"
+#line 295 "FreeMarkerGrammar.yp"
 { $_[0]->_popContext('assignment') }
 	],
-	[#Rule 105
+	[#Rule 104
 		 'tag_assign', 5, undef
 	],
-	[#Rule 106
+	[#Rule 105
 		 '@5-3', 0,
 sub
-#line 303 "FreeMarkerGrammar.yp"
+#line 301 "FreeMarkerGrammar.yp"
 { $_[0]->_popContext('assignment') }
 	],
-	[#Rule 107
+	[#Rule 106
 		 '@6-5', 0,
 sub
-#line 305 "FreeMarkerGrammar.yp"
+#line 303 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext( 'assign' ); }
 	],
-	[#Rule 108
+	[#Rule 107
 		 'tag_assign', 10,
 sub
-#line 310 "FreeMarkerGrammar.yp"
+#line 308 "FreeMarkerGrammar.yp"
 {
 								$_[0]->_storeData( _unquote($_[3]), $_[7] );
 								$_[0]->_popContext( 'assign' );
 							}
 	],
-	[#Rule 109
+	[#Rule 108
 		 'directive_assign', 1,
 sub
-#line 316 "FreeMarkerGrammar.yp"
+#line 314 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext('assignment') }
 	],
-	[#Rule 110
+	[#Rule 109
 		 'directive_assign_end', 1, undef
 	],
-	[#Rule 111
+	[#Rule 110
 		 '@7-4', 0,
 sub
-#line 324 "FreeMarkerGrammar.yp"
+#line 322 "FreeMarkerGrammar.yp"
 { $_[0]->_popContext('assignment') }
 	],
-	[#Rule 112
+	[#Rule 111
 		 '@8-6', 0,
 sub
-#line 326 "FreeMarkerGrammar.yp"
+#line 324 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext( 'macrocontents' ); }
 	],
-	[#Rule 113
+	[#Rule 112
 		 'tag_macro', 11,
 sub
-#line 331 "FreeMarkerGrammar.yp"
+#line 329 "FreeMarkerGrammar.yp"
 {
 								my $content = $_[8] || '';
 								$_[0]->{_data}->{_fmMacros}->{$_[3]}->{contents} = $content;
@@ -4224,44 +4208,44 @@ sub
 								return '';
 							}
 	],
-	[#Rule 114
+	[#Rule 113
 		 'directive_macro', 1,
 sub
-#line 346 "FreeMarkerGrammar.yp"
+#line 344 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext('assignment') }
 	],
-	[#Rule 115
+	[#Rule 114
 		 'directive_macro_end', 1, undef
 	],
-	[#Rule 116
+	[#Rule 115
 		 'macroparams', 1, undef
 	],
-	[#Rule 117
+	[#Rule 116
 		 'macroparams', 2,
 sub
-#line 353 "FreeMarkerGrammar.yp"
+#line 351 "FreeMarkerGrammar.yp"
 {
 								$_[1] = '' if !defined $_[1];
 								$_[2] = '' if !defined $_[2];
 								return "$_[1] $_[2]";
 							}
 	],
-	[#Rule 118
+	[#Rule 117
 		 'macroparam', 1, undef
 	],
-	[#Rule 119
+	[#Rule 118
 		 'macroparam', 0, undef
 	],
-	[#Rule 120
+	[#Rule 119
 		 'macro_assignments', 1, undef
 	],
-	[#Rule 121
+	[#Rule 120
 		 'macro_assignments', 2, undef
 	],
-	[#Rule 122
+	[#Rule 121
 		 'macro_assignment', 3,
 sub
-#line 369 "FreeMarkerGrammar.yp"
+#line 367 "FreeMarkerGrammar.yp"
 {
 								print "Invalid macro parameter:$_[1]\n" if (!$_[0]->{_workingData}->{validMacroParams}->{$_[1]});
 								if (_isString($_[3])) {
@@ -4271,64 +4255,64 @@ sub
 								}
 							}
 	],
-	[#Rule 123
+	[#Rule 122
 		 'macro_assignment', 0, undef
 	],
-	[#Rule 124
+	[#Rule 123
 		 '@9-2', 0,
 sub
-#line 382 "FreeMarkerGrammar.yp"
+#line 380 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext('assignment') }
 	],
-	[#Rule 125
+	[#Rule 124
 		 '@10-4', 0,
 sub
-#line 384 "FreeMarkerGrammar.yp"
+#line 382 "FreeMarkerGrammar.yp"
 {
 								$_[0]->{_workingData}->{validMacroParams} = $_[0]->{_data}->{_fmMacros}->{$_[4]}->{params};
 							}
 	],
-	[#Rule 126
+	[#Rule 125
 		 '@11-6', 0,
 sub
-#line 388 "FreeMarkerGrammar.yp"
+#line 386 "FreeMarkerGrammar.yp"
 { $_[0]->_popContext('assignment') }
 	],
-	[#Rule 127
+	[#Rule 126
 		 'tag_macro_call', 9,
 sub
-#line 391 "FreeMarkerGrammar.yp"
+#line 389 "FreeMarkerGrammar.yp"
 {
 								my $parsed = $_[0]->_parse( $_[0]->{_data}->{_fmMacros}->{$_[4]}->{contents} );
 								undef $_[0]->{_workingData}->{validMacroParams};
 								return $parsed;
 							}
 	],
-	[#Rule 128
+	[#Rule 127
 		 '@12-2', 0,
 sub
-#line 400 "FreeMarkerGrammar.yp"
+#line 398 "FreeMarkerGrammar.yp"
 {
 								$_[0]->{_workingData}->{nestedLevel}++;
 								$_[0]->_pushContext('listParams');
 							}
 	],
-	[#Rule 129
+	[#Rule 128
 		 '@13-5', 0,
 sub
-#line 406 "FreeMarkerGrammar.yp"
+#line 404 "FreeMarkerGrammar.yp"
 { $_[0]->_popContext('listParams') }
 	],
-	[#Rule 130
+	[#Rule 129
 		 '@14-8', 0,
 sub
-#line 409 "FreeMarkerGrammar.yp"
+#line 407 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext( 'list' ) }
 	],
-	[#Rule 131
+	[#Rule 130
 		 'tag_list', 13,
 sub
-#line 414 "FreeMarkerGrammar.yp"
+#line 412 "FreeMarkerGrammar.yp"
 {
 								$_[0]->_popContext( 'list' );
 								$_[0]->{_workingData}->{nestedLevel}--;
@@ -4345,27 +4329,27 @@ sub
 								return $result;
 							}
 	],
-	[#Rule 132
+	[#Rule 131
 		 '@15-2', 0,
 sub
-#line 433 "FreeMarkerGrammar.yp"
+#line 431 "FreeMarkerGrammar.yp"
 {
 								$_[0]->{_workingData}->{ifLevel}++;
 								$_[0]->_pushContext('condition');
 							}
 	],
-	[#Rule 133
+	[#Rule 132
 		 '@16-4', 0,
 sub
-#line 438 "FreeMarkerGrammar.yp"
+#line 436 "FreeMarkerGrammar.yp"
 {
 								$_[0]->_popContext('condition');
 							}
 	],
-	[#Rule 134
+	[#Rule 133
 		 'tag_if', 10,
 sub
-#line 446 "FreeMarkerGrammar.yp"
+#line 444 "FreeMarkerGrammar.yp"
 {
 								$_[0]->{_workingData}->{ifLevel}--;
 								my $content = $_[7] || '';
@@ -4384,122 +4368,125 @@ sub
 								$_[0]->{_workingData}->{ifBlocks} = () if $_[0]->{_workingData}->{ifLevel} == 0;
 							}
 	],
-	[#Rule 135
+	[#Rule 134
 		 '@17-2', 0,
 sub
-#line 467 "FreeMarkerGrammar.yp"
+#line 465 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext('evalcondition') }
 	],
-	[#Rule 136
+	[#Rule 135
 		 '@18-4', 0,
 sub
-#line 469 "FreeMarkerGrammar.yp"
+#line 467 "FreeMarkerGrammar.yp"
 { $_[0]->_popContext('evalcondition') }
 	],
-	[#Rule 137
+	[#Rule 136
 		 'tmp_tag_condition', 6,
 sub
-#line 471 "FreeMarkerGrammar.yp"
+#line 469 "FreeMarkerGrammar.yp"
 {
 								return $_[4] == 1 ? 1 : 0;
 							}
 	],
-	[#Rule 138
+	[#Rule 137
 		 '@19-2', 0,
 sub
-#line 478 "FreeMarkerGrammar.yp"
+#line 476 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext('assignment') }
 	],
-	[#Rule 139
+	[#Rule 138
 		 '@20-4', 0,
 sub
-#line 480 "FreeMarkerGrammar.yp"
+#line 478 "FreeMarkerGrammar.yp"
 { $_[0]->_popContext('assignment') }
 	],
-	[#Rule 140
+	[#Rule 139
 		 'tag_ftl', 6,
 sub
-#line 482 "FreeMarkerGrammar.yp"
+#line 480 "FreeMarkerGrammar.yp"
 { '' }
 	],
-	[#Rule 141
+	[#Rule 140
 		 'expr_ftl_assignments', 1, undef
 	],
-	[#Rule 142
+	[#Rule 141
 		 'expr_ftl_assignments', 2, undef
 	],
-	[#Rule 143
+	[#Rule 142
 		 'expr_ftl_assignment', 3,
 sub
-#line 489 "FreeMarkerGrammar.yp"
+#line 487 "FreeMarkerGrammar.yp"
 { $_[0]->{_data}->{_ftlData}->{$_[1]} = $_[3] }
 	],
-	[#Rule 144
+	[#Rule 143
 		 '@21-2', 0,
 sub
-#line 494 "FreeMarkerGrammar.yp"
+#line 492 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext( 'comment' ) }
 	],
-	[#Rule 145
+	[#Rule 144
 		 'tag_comment', 6,
 sub
-#line 498 "FreeMarkerGrammar.yp"
+#line 496 "FreeMarkerGrammar.yp"
 {
 								$_[0]->_popContext( 'comment' );
 								$_[0]->_popContext('tagParams');
 								return '';
 							}
 	],
-	[#Rule 146
+	[#Rule 145
 		 '@22-2', 0,
 sub
-#line 507 "FreeMarkerGrammar.yp"
+#line 505 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext('assignment') }
 	],
-	[#Rule 147
+	[#Rule 146
 		 '@23-4', 0,
 sub
-#line 509 "FreeMarkerGrammar.yp"
+#line 507 "FreeMarkerGrammar.yp"
 { $_[0]->_popContext('assignment') }
 	],
-	[#Rule 148
-		 'tag_dump', 8,
+	[#Rule 147
+		 'tag_dump', 7,
 sub
-#line 513 "FreeMarkerGrammar.yp"
+#line 510 "FreeMarkerGrammar.yp"
 {
 								use Data::Dumper;
 								return Dumper($_[4]);
 							}
 	],
-	[#Rule 149
+	[#Rule 148
 		 '@24-1', 0,
 sub
-#line 520 "FreeMarkerGrammar.yp"
+#line 517 "FreeMarkerGrammar.yp"
 { $_[0]->_pushContext('variableParams') }
 	],
-	[#Rule 150
+	[#Rule 149
 		 'variable', 4,
 sub
-#line 523 "FreeMarkerGrammar.yp"
+#line 520 "FreeMarkerGrammar.yp"
 {
 								$_[0]->_popContext('variableParams');
 								undef $_[0]->{_workingData}->{tmpData};
 								return $_[0]->_parse( $_[3] );
 							}
 	],
-	[#Rule 151
+	[#Rule 150
 		 'data', 1,
 sub
-#line 531 "FreeMarkerGrammar.yp"
+#line 528 "FreeMarkerGrammar.yp"
 {
 								$_[0]->_value($_[1])
 							}
 	],
-	[#Rule 152
+	[#Rule 151
 		 'data', 1,
 sub
-#line 536 "FreeMarkerGrammar.yp"
+#line 533 "FreeMarkerGrammar.yp"
 { $_[0]->data() }
+	],
+	[#Rule 152
+		 'data', 1, undef
 	],
 	[#Rule 153
 		 'data', 1, undef
@@ -4517,12 +4504,9 @@ sub
 		 'data', 1, undef
 	],
 	[#Rule 158
-		 'data', 1, undef
-	],
-	[#Rule 159
 		 'type_op', 3,
 sub
-#line 553 "FreeMarkerGrammar.yp"
+#line 550 "FreeMarkerGrammar.yp"
 {
 								my $d = $_[0]->{_workingData}->{tmpData};
 								$d = $_[0]->data() if !defined $d;
@@ -4534,22 +4518,22 @@ sub
 								return $value;
 							}
 	],
+	[#Rule 159
+		 'type_op', 3,
+sub
+#line 562 "FreeMarkerGrammar.yp"
+{ $_[2] }
+	],
 	[#Rule 160
 		 'type_op', 3,
 sub
 #line 565 "FreeMarkerGrammar.yp"
-{ $_[2] }
+{ $_[1] * $_[3] }
 	],
 	[#Rule 161
 		 'type_op', 3,
 sub
-#line 568 "FreeMarkerGrammar.yp"
-{ $_[1] * $_[3] }
-	],
-	[#Rule 162
-		 'type_op', 3,
-sub
-#line 572 "FreeMarkerGrammar.yp"
+#line 569 "FreeMarkerGrammar.yp"
 {
 								if ( UNIVERSAL::isa( $_[1], "ARRAY" ) && UNIVERSAL::isa( $_[3], "ARRAY" ) ) {
 									my @list = ( @{$_[1]}, @{$_[3]} );
@@ -4560,16 +4544,16 @@ sub
 								}
 							}
 	],
-	[#Rule 163
+	[#Rule 162
 		 'type_op', 3,
 sub
-#line 583 "FreeMarkerGrammar.yp"
+#line 580 "FreeMarkerGrammar.yp"
 { undef }
 	],
-	[#Rule 164
+	[#Rule 163
 		 'type_op', 4,
 sub
-#line 586 "FreeMarkerGrammar.yp"
+#line 583 "FreeMarkerGrammar.yp"
 {
 								if ( $_[0]->_context() eq 'listParams' ) {
 									my $value = $_[1]->[$_[3]];
@@ -4582,10 +4566,10 @@ sub
 								}
 							}
 	],
-	[#Rule 165
+	[#Rule 164
 		 'type_op', 6,
 sub
-#line 599 "FreeMarkerGrammar.yp"
+#line 596 "FreeMarkerGrammar.yp"
 {
 								my @list;
 								if ( $_[3] > $_[5] ) {
@@ -4597,29 +4581,29 @@ sub
 								return \@list;
 							}
 	],
-	[#Rule 166
+	[#Rule 165
 		 'type_op', 5,
 sub
-#line 611 "FreeMarkerGrammar.yp"
+#line 608 "FreeMarkerGrammar.yp"
 {
 								my $maxlength = scalar @{$_[1]} - 1;
 								my @list = @{$_[1]}[$_[3]..$maxlength];
 								return \@list;
 							}
 	],
-	[#Rule 167
+	[#Rule 166
 		 'type_op', 5,
 sub
-#line 618 "FreeMarkerGrammar.yp"
+#line 615 "FreeMarkerGrammar.yp"
 {
 								my @list = @{$_[1]}[0..$_[4]];
 								return \@list;
 							}
 	],
-	[#Rule 168
+	[#Rule 167
 		 'type_op', 4,
 sub
-#line 624 "FreeMarkerGrammar.yp"
+#line 621 "FreeMarkerGrammar.yp"
 {
 								my $d = $_[0]->{_workingData}->{tmpData};
 								$d = $_[0]->data() if !defined $d;
@@ -4629,10 +4613,10 @@ sub
 								return \@list;
 							}
 	],
-	[#Rule 169
+	[#Rule 168
 		 'type_op', 4,
 sub
-#line 634 "FreeMarkerGrammar.yp"
+#line 631 "FreeMarkerGrammar.yp"
 {
 								my $d = $_[0]->{_workingData}->{tmpData};
 								$d = $_[0]->data() if !defined $d;
@@ -4641,31 +4625,31 @@ sub
 								return $value;
 							}
 	],
-	[#Rule 170
+	[#Rule 169
 		 'type_op', 6,
 sub
-#line 643 "FreeMarkerGrammar.yp"
+#line 640 "FreeMarkerGrammar.yp"
 { join ( _unquote($_[5]), @{$_[1]} ) }
 	],
-	[#Rule 171
+	[#Rule 170
 		 'type_op', 3,
 sub
-#line 646 "FreeMarkerGrammar.yp"
+#line 643 "FreeMarkerGrammar.yp"
 {
 								my $sorted = _sort( $_[1] );
 								return $sorted;
 							}
 	],
-	[#Rule 172
+	[#Rule 171
 		 'type_op', 3,
 sub
-#line 652 "FreeMarkerGrammar.yp"
+#line 649 "FreeMarkerGrammar.yp"
 { scalar @{$_[1]} }
 	],
-	[#Rule 173
+	[#Rule 172
 		 'type_op', 6,
 sub
-#line 655 "FreeMarkerGrammar.yp"
+#line 652 "FreeMarkerGrammar.yp"
 {
 								my $key = _unquote($_[5]);								
 								my $isStringSort = 1;
@@ -4684,10 +4668,10 @@ sub
 								return \@sorted;
 							}
 	],
-	[#Rule 174
+	[#Rule 173
 		 'type_op', 6,
 sub
-#line 674 "FreeMarkerGrammar.yp"
+#line 671 "FreeMarkerGrammar.yp"
 {
 								# differentiate between numbers and strings
 								# this is not fast
@@ -4698,10 +4682,10 @@ sub
     							return $index;
 							}
 	],
-	[#Rule 175
+	[#Rule 174
 		 'type_op', 6,
 sub
-#line 685 "FreeMarkerGrammar.yp"
+#line 682 "FreeMarkerGrammar.yp"
 {
 								# differentiate between numbers and strings
 								# this is not fast
@@ -4711,130 +4695,130 @@ sub
     							return 0;
 							}
 	],
-	[#Rule 176
+	[#Rule 175
 		 'type_op', 3,
 sub
-#line 695 "FreeMarkerGrammar.yp"
+#line 692 "FreeMarkerGrammar.yp"
 {
 								my @reversed = reverse @{$_[1]};
 								return \@reversed;
 							}
 	],
+	[#Rule 176
+		 'type_op', 3,
+sub
+#line 698 "FreeMarkerGrammar.yp"
+{ @{$_[1]}[-1] }
+	],
 	[#Rule 177
 		 'type_op', 3,
 sub
 #line 701 "FreeMarkerGrammar.yp"
-{ @{$_[1]}[-1] }
+{ @{$_[1]}[0] }
 	],
 	[#Rule 178
 		 'type_op', 3,
 sub
-#line 704 "FreeMarkerGrammar.yp"
-{ @{$_[1]}[0] }
+#line 705 "FreeMarkerGrammar.yp"
+{ _capfirst( $_[1] ) }
 	],
 	[#Rule 179
 		 'type_op', 3,
 sub
 #line 708 "FreeMarkerGrammar.yp"
-{ _capfirst( $_[1] ) }
+{ _capitalize( $_[1] ) }
 	],
 	[#Rule 180
 		 'type_op', 3,
 sub
 #line 711 "FreeMarkerGrammar.yp"
-{ _capitalize( $_[1] ) }
+{ $_[0]->_parse('${' . $_[1] . '}') }
 	],
 	[#Rule 181
 		 'type_op', 3,
 sub
 #line 714 "FreeMarkerGrammar.yp"
-{ $_[0]->_parse('${' . $_[1] . '}') }
+{ _html($_[1]) }
 	],
 	[#Rule 182
 		 'type_op', 3,
 sub
 #line 717 "FreeMarkerGrammar.yp"
-{ _html($_[1]) }
+{ _xhtml($_[1]) }
 	],
 	[#Rule 183
 		 'type_op', 3,
 sub
 #line 720 "FreeMarkerGrammar.yp"
-{ _xhtml($_[1]) }
+{ return defined $_[1] ? length( $_[1] ) : 0 }
 	],
 	[#Rule 184
 		 'type_op', 3,
 sub
 #line 723 "FreeMarkerGrammar.yp"
-{ return defined $_[1] ? length( $_[1] ) : 0 }
-	],
-	[#Rule 185
-		 'type_op', 3,
-sub
-#line 726 "FreeMarkerGrammar.yp"
 { lc $_[1] }
 	],
-	[#Rule 186
+	[#Rule 185
 		 'type_op', 8,
 sub
-#line 729 "FreeMarkerGrammar.yp"
+#line 726 "FreeMarkerGrammar.yp"
 { _replace( $_[1], _unquote($_[5]), _unquote($_[7]) ) }
 	],
-	[#Rule 187
+	[#Rule 186
 		 'type_op', 3,
 sub
-#line 732 "FreeMarkerGrammar.yp"
+#line 729 "FreeMarkerGrammar.yp"
 { $_[1] }
 	],
-	[#Rule 188
+	[#Rule 187
 		 'type_op', 8,
 sub
-#line 735 "FreeMarkerGrammar.yp"
+#line 732 "FreeMarkerGrammar.yp"
 { $_[1] ? _unquote($_[5]) : _unquote($_[7]) }
 	],
-	[#Rule 189
+	[#Rule 188
 		 'type_op', 6,
 sub
-#line 738 "FreeMarkerGrammar.yp"
+#line 735 "FreeMarkerGrammar.yp"
 { _substring( $_[1], $_[5] ) }
 	],
-	[#Rule 190
+	[#Rule 189
 		 'type_op', 8,
 sub
-#line 741 "FreeMarkerGrammar.yp"
+#line 738 "FreeMarkerGrammar.yp"
 { _substring( $_[1], $_[5], $_[7] ) }
+	],
+	[#Rule 190
+		 'type_op', 3,
+sub
+#line 741 "FreeMarkerGrammar.yp"
+{ _uncapfirst( $_[1] ) }
 	],
 	[#Rule 191
 		 'type_op', 3,
 sub
 #line 744 "FreeMarkerGrammar.yp"
-{ _uncapfirst( $_[1] ) }
+{ uc $_[1] }
 	],
 	[#Rule 192
 		 'type_op', 3,
 sub
 #line 747 "FreeMarkerGrammar.yp"
-{ uc $_[1] }
-	],
-	[#Rule 193
-		 'type_op', 3,
-sub
-#line 750 "FreeMarkerGrammar.yp"
 {
 								my @list = _wordlist( $_[1] );
 								return \@list;
 							}
 	],
+	[#Rule 193
+		 'type_op', 3,
+sub
+#line 753 "FreeMarkerGrammar.yp"
+{ _unquote($_[3]) }
+	],
 	[#Rule 194
 		 'type_op', 3,
 sub
 #line 756 "FreeMarkerGrammar.yp"
-{ _unquote($_[3]) }
-	],
-	[#Rule 195
-		 'type_op', 3,
-sub
-#line 759 "FreeMarkerGrammar.yp"
 { 
 								return 0 if !defined $_[1];
 								if ($_[1] && _isString($_[3])) {
@@ -4844,10 +4828,10 @@ sub
 								}
 							}
 	],
-	[#Rule 196
+	[#Rule 195
 		 'type_op', 3,
 sub
-#line 769 "FreeMarkerGrammar.yp"
+#line 766 "FreeMarkerGrammar.yp"
 { 
 								if (_isString($_[3])) {
 									return $_[1] ne $_[3];
@@ -4856,48 +4840,48 @@ sub
 								}
 							}
 	],
-	[#Rule 197
+	[#Rule 196
 		 'type_op', 2,
 sub
-#line 778 "FreeMarkerGrammar.yp"
+#line 775 "FreeMarkerGrammar.yp"
 { 
 								return defined $_[1];
 							}
+	],
+	[#Rule 197
+		 'type_op', 3,
+sub
+#line 780 "FreeMarkerGrammar.yp"
+{ return 0 if !defined $_[1]; $_[1] > $_[3] }
 	],
 	[#Rule 198
 		 'type_op', 3,
 sub
 #line 783 "FreeMarkerGrammar.yp"
-{ return 0 if !defined $_[1]; $_[1] > $_[3] }
+{ return 0 if !defined $_[1]; $_[1] >= $_[3] }
 	],
 	[#Rule 199
 		 'type_op', 3,
 sub
 #line 786 "FreeMarkerGrammar.yp"
-{ return 0 if !defined $_[1]; $_[1] >= $_[3] }
+{ return 0 if !defined $_[1]; $_[1] < $_[3] }
 	],
 	[#Rule 200
 		 'type_op', 3,
 sub
 #line 789 "FreeMarkerGrammar.yp"
-{ return 0 if !defined $_[1]; $_[1] < $_[3] }
-	],
-	[#Rule 201
-		 'type_op', 3,
-sub
-#line 792 "FreeMarkerGrammar.yp"
 { return 0 if !defined $_[1]; $_[1] <= $_[3] }
 	],
-	[#Rule 202
+	[#Rule 201
 		 'string_op', 1,
 sub
-#line 796 "FreeMarkerGrammar.yp"
+#line 793 "FreeMarkerGrammar.yp"
 { _unquote( $_[1] ) }
 	],
-	[#Rule 203
+	[#Rule 202
 		 'string_op', 3,
 sub
-#line 799 "FreeMarkerGrammar.yp"
+#line 796 "FreeMarkerGrammar.yp"
 {
 								if (defined $_[3]) {
 									return $_[1] . $_[3];
@@ -4906,52 +4890,52 @@ sub
 								}
 							}
 	],
-	[#Rule 204
+	[#Rule 203
 		 'string_op', 2,
 sub
-#line 808 "FreeMarkerGrammar.yp"
+#line 805 "FreeMarkerGrammar.yp"
 { _protect(_unquote( $_[2] )) }
 	],
-	[#Rule 205
+	[#Rule 204
 		 'hash', 3,
 sub
-#line 812 "FreeMarkerGrammar.yp"
+#line 809 "FreeMarkerGrammar.yp"
 { $_[2] }
 	],
-	[#Rule 206
+	[#Rule 205
 		 'hashes', 1,
 sub
-#line 815 "FreeMarkerGrammar.yp"
+#line 812 "FreeMarkerGrammar.yp"
 {
 								$_[0]->{_workingData}->{'hashes'} ||= ();
 								push @{$_[0]->{_workingData}->{'hashes'}}, $_[1];
 							}
 	],
-	[#Rule 207
+	[#Rule 206
 		 'hashes', 3,
 sub
-#line 821 "FreeMarkerGrammar.yp"
+#line 818 "FreeMarkerGrammar.yp"
 {	
 								$_[0]->{_workingData}->{'hashes'} ||= ();
 								push @{$_[0]->{_workingData}->{'hashes'}}, $_[3];
 							}
 	],
-	[#Rule 208
+	[#Rule 207
 		 'hash_op', 1, undef
 	],
-	[#Rule 209
+	[#Rule 208
 		 'hash_op', 3,
 sub
-#line 829 "FreeMarkerGrammar.yp"
+#line 826 "FreeMarkerGrammar.yp"
 {
 								my %merged = (%{$_[1]}, %{$_[3]});
 								return \%merged;
 							}
 	],
-	[#Rule 210
+	[#Rule 209
 		 'hashvalue', 3,
 sub
-#line 835 "FreeMarkerGrammar.yp"
+#line 832 "FreeMarkerGrammar.yp"
 {
 								my $local = {
 									_unquote($_[1]) => _unquote($_[3])
@@ -4959,38 +4943,38 @@ sub
 								return $local;
 							}
 	],
-	[#Rule 211
+	[#Rule 210
 		 'hashvalues', 1, undef
 	],
-	[#Rule 212
+	[#Rule 211
 		 'hashvalues', 3,
 sub
-#line 845 "FreeMarkerGrammar.yp"
+#line 842 "FreeMarkerGrammar.yp"
 {
 								my %merged = (%{$_[1]}, %{$_[3]});
 								return \%merged;
 							}
 	],
-	[#Rule 213
+	[#Rule 212
 		 'array_op', 3,
 sub
-#line 852 "FreeMarkerGrammar.yp"
+#line 849 "FreeMarkerGrammar.yp"
 {
 								my @list = @{$_[0]->{_workingData}->{'hashes'}};
 								undef $_[0]->{_workingData}->{'hashes'};
 								return \@list;
 							}
 	],
-	[#Rule 214
+	[#Rule 213
 		 'array_op', 1,
 sub
-#line 859 "FreeMarkerGrammar.yp"
+#line 856 "FreeMarkerGrammar.yp"
 { _toList($_[1]) }
 	],
-	[#Rule 215
+	[#Rule 214
 		 'array_op', 3,
 sub
-#line 862 "FreeMarkerGrammar.yp"
+#line 859 "FreeMarkerGrammar.yp"
 {
 								my @list;
 								if ( $_[1] > $_[3] ) {
@@ -5002,28 +4986,28 @@ sub
 								return \@list;
 							}
 	],
-	[#Rule 216
+	[#Rule 215
 		 'array_op', 2,
 sub
-#line 874 "FreeMarkerGrammar.yp"
+#line 871 "FreeMarkerGrammar.yp"
 {
 								my @list = (0..$_[2]);
 								return \@list;
 							}
 	],
-	[#Rule 217
+	[#Rule 216
 		 'array_pos', 1, undef
 	],
-	[#Rule 218
+	[#Rule 217
 		 'array_pos', 1,
 sub
-#line 883 "FreeMarkerGrammar.yp"
+#line 880 "FreeMarkerGrammar.yp"
 { $_[0]->_value($_[1]) }
 	],
-	[#Rule 219
+	[#Rule 218
 		 'func_op', 4,
 sub
-#line 887 "FreeMarkerGrammar.yp"
+#line 884 "FreeMarkerGrammar.yp"
 {
 								my $function = $_[0]->_value($_[1]);
 								return undef if !$function;
@@ -5040,7 +5024,7 @@ sub
     bless($self,$class);
 }
 
-#line 898 "FreeMarkerGrammar.yp"
+#line 895 "FreeMarkerGrammar.yp"
 
 
 
@@ -5816,7 +5800,9 @@ sub _lexer {
         }
 
         if ($isInsideTag) {
-            return ( 'string', $1 ) if (s/^(.*?)(-->|<\#|<\/\#)/$2/so);
+        	if (s/^(.*?)(-->|<\#|<\/\#)/$2/so) {
+	            return ( 'string', $1 );
+	        }
         }
         else {
             return ( 'string', $1 )

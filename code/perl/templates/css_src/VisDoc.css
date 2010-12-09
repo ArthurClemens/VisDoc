@@ -912,7 +912,11 @@ tt,
 .codeIdentifier {
 	color:#069;
 }
-.codeString {
+.codeString,
+.codeString .codeIdentifier,
+.codeString .codeNumber,
+.codeString .codeKeyword,
+.codeString .codeProperty {
 	color:blue;
 }
 .codeNumber {

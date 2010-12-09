@@ -203,15 +203,14 @@ sub formatPropertyAccess {
 
 =cut
 
-sub colorize {
+sub prepareColorize {
 
     #my $this = $_[0]
     #my $text = $_[1]
 
     my @lines = split( /\n/, $_[1] );
     foreach my $line (@lines) {
-        $_[0]->_colorizeLine($line);
-        $_[0]->_deTokenColor($line);
+        $_[0]->_createColorTokens($line);
     }
     $_[1] = join( "\n", @lines );
 }
@@ -220,7 +219,23 @@ sub colorize {
 
 =cut
 
-sub _colorizeLine {
+sub finishColorize {
+
+    #my $this = $_[0]
+    #my $text = $_[1]
+
+    my @lines = split( /\n/, $_[1] );
+    foreach my $line (@lines) {
+        $_[0]->_substituteColorTokens($line);
+    }
+    $_[1] = join( "\n", @lines );
+}
+
+=pod
+
+=cut
+
+sub _createColorTokens {
 
     #my $this = $_[0]
     #my $text = $_[1]
@@ -237,6 +252,12 @@ s/(\/\/.*)/$VisDoc::StringUtils::STUB_COLORIZE_CODE_COMMENT_START$1$VisDoc::Stri
     # if this is a comment, do not colorize any further
     return if $match;
 
+    # quotes
+    use Regexp::Common qw( RE_quoted );
+    my $quotedPattern = RE_quoted( -keep );
+    $_[1] =~
+s/$quotedPattern/$VisDoc::StringUtils::STUB_COLORIZE_CODE_STRING_START$1$VisDoc::StringUtils::STUB_COLORIZE_CODE_STRING_END/g;
+
     # numbers
     $_[1] =~
 s/((&amp;#|%)*(\b[0-9]+\b))/$VisDoc::StringUtils::STUB_COLORIZE_CODE_NUMBER_START$1$VisDoc::StringUtils::STUB_COLORIZE_CODE_NUMBER_END/g;
@@ -252,19 +273,13 @@ s/($_[0]->{syntax}->{identifiers})/$VisDoc::StringUtils::STUB_COLORIZE_CODE_IDEN
     #properties
     $_[1] =~
 s/($_[0]->{syntax}->{properties})/$VisDoc::StringUtils::STUB_COLORIZE_CODE_PROPERTY_START$1$VisDoc::StringUtils::STUB_COLORIZE_CODE_PROPERTY_END/g;
-
-    # quotes
-    use Regexp::Common qw( RE_quoted );
-    my $quotedPattern = RE_quoted( -keep );
-    $_[1] =~
-s/$quotedPattern/$VisDoc::StringUtils::STUB_COLORIZE_CODE_STRING_START$1$VisDoc::StringUtils::STUB_COLORIZE_CODE_STRING_END/g;
 }
 
 =pod
 
 =cut
 
-sub _deTokenColor {
+sub _substituteColorTokens {
 
     #my $this = $_[0]
     #my $text = $_[1]
