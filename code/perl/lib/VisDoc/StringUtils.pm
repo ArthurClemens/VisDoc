@@ -498,6 +498,8 @@ sub deletePathExtension {
 
     #my $text = $_[0]
 
+	return if !$_[0];
+	
     # remove last / unless this is root
     $_[0] =~ s/^(.*?)\/$/$1/ unless $_[0] eq '/';
 

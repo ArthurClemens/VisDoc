@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" encoding="utf-8">
+	<head>
+		<title>DecisionTreeService | Documentation</title>
+		<link rel="stylesheet" type="text/css" href="../css/shCoreDefault.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/VisDoc.min.css" />
+		<script type="text/javascript" src="../js/1_jquery.min.js"></script>
+		<script type="text/javascript" src="../js/2_jquery.cookie.min.js"></script>
+		<script type="text/javascript" src="../js/3_jquery.simpletreeview.min.js"></script>
+		<script type="text/javascript" src="../js/4_shCore.min.js"></script>
+		<script type="text/javascript" src="../js/5_shBrushAS3.min.js"></script>
+		<script type="text/javascript" src="../js/6_shBrushJava.min.js"></script>
+		<script type="text/javascript" src="../js/7_VisDoc.min.js"></script>
+	</head>
+	<body class='isShowingNavigation' id='page_com_control4_csdk_DecisionTreeService'>
+	    <div id='page'> 
+			<div id='wrapper'>
+				<div id='outer'> 
+					<div id='floatWrap'> 
+						<div id='main'>
+							<div id='clearHeaderCenter'></div> 
+							<div id='mainContent'>
+																<h1>DecisionTreeService</h1>									<div class='classProperties'>
+		<table cellspacing='0'>
+				<tr>
+		<th>Kind of class:</th>
+		<td>public class</td>
+	</tr>
+							<tr>
+		<th>Package:</th>
+		<td>
+			<ul>
+								<li>			<a href="package_com_control4_csdk.html">com.control4.csdk</a>
+</li>
+							</ul>
+		</td>
+	</tr>
+							<tr>
+		<th>Inherits from:</th>
+		<td>
+			<ul>
+								<li>			none</li>
+							</ul>
+		</td>
+	</tr>
+																<tr>
+		<th class='classDetails'>Classpath:</th>
+		<td class='classDetails'>com.control4.csdk.DecisionTreeService</td>
+	</tr>
+	<tr>
+		<th class='classDetails'>File last modified:</th>
+		<td class='classDetails'>Tuesday, 01 February 2011, 18:32:04</td>
+	</tr>
+		</table>
+	</div>
+		<div class='classDescription'>
+	<span class='descriptionSummary'>Create a c4i file from a question and answer session with the user.</span>	
+<p>A decision tree represents a series of interactions with the user
+that determine the set of IR codes for a device to create a c4i file.  This
+is a much shorter process for creating a c4i file for an unknown device than
+the driver wizard method since it doesn't require IR learning for all the
+commands to control the device.</p>
+
+<p>Each interaction is represented as a GUI element containing the information
+requested from the user interface in order to advance the decision tree.  See
+the documentation for the <code>GeXXX</code> classes for details on the GUI elements.</p>
+
+<p>The decision tree engine resides on a Control 4 web service, therefore using a
+decision tree requires internet access to function properly.  The decision tree
+engine uses a server session state to remember the current position within the
+decision tree on each call to the web service.  Web service session state is
+maintained on the server and requires client-side cookies in order to look up
+the session state for the client.</p>
+
+<p>To use a decision tree, the client first calls <code>FindDecisionTree</code> to locate a
+decision tree for devices supporting a set of c4i proxy types for a particular
+manufacturer.  If a matching decision tree is found, the decision tree is stored
+in the session state.</p>
+
+<p>Once a decision tree has been found, <code>StartDecisionTree</code> is used to begin processing
+the decision tree.  It returns the first GUI element.  An answer to the first GUI
+element is then provided to <code>AdvanceDecisionTree</code>, which returns the next GUI element.
+This process continues with <code>AdvanceDecisionTree</code> receiving answers and returning GUI
+elements until a <code>GeStopSuccess</code> or <code>GeStopFailure</code> GUI element is returned.  On success,
+<code>FinishDecisionTree</code> is called to return the created c4i XML and any commands that still
+need to be defined through IR learning.  On failure, FinishDecisionTree does not need
+to be called.</p>
+
+<p>Two additional methods are used to assist Control 4 with datamining of created c4i
+files.  This helps populate the web service database so that subsequent customers do
+not need to create c4i files through the decision tree or driver wizard process, but
+will simply be able to pick them from a list.</p>
+
+<p>Decision trees are implemented in a remote web service and all methods on this class
+are asynchronous.  Each method is supplied with a callback that is invoked when the
+response is obtained from the web service.  The general signature of the callback is</p>
+
+<p><code><span class="codeKeyword">function</span> callback(errorCode : <span class="codeIdentifier">Number</span>, result : <span class="codeIdentifier">Object</span>) : <span class="codeIdentifier">Void</span></code></p>
+
+<p>The <code>errorCode</code> parameter to the callback will be zero on success and non-zero on an error.
+The type of the result varies depending on the method.  More than one parameter may be
+present on some callbacks.  Check the method documentation for the specific callback
+signature.</p></div>
+
+									<div class='toc'>
+		<h2 id='Summary'>Summary</h2>
+		<div class='docNav'>
+			<ul>
+									<li>
+						<span class='typeInfoHide'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>&times;</span>Hide type info</a></span>
+						<span class='typeInfoShow'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>+</span>Show type info</a></span>
+					</li>									<li>
+						<span class='summariesHide'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>&times;</span>Hide summaries</a></span>
+						<span class='summariesShow'><a href="#" class='jqButton jqButtonSmall'><span class='jqButtonIcon'>+</span>Show summaries</a></span>
+					</li>			</ul>
+			<div class='clear'></div>
+		</div>
+				<div class='memberList'>
+							<div class='memberSummaryPart'>
+					<span class='title'>Constructor</span>
+					<ul>
+													<li class=''>								
+								<a href="#DecisionTreeService">DecisionTreeService</a>
+																<span class='typeInfo'>(onReady:Function, onError:Function)</span>																<ul class='summary'>
+									<li>DecisionTreeService constructor.</li>
+								</ul>							</li>
+											</ul>
+									</div>
+							<div class='memberSummaryPart'>
+					<span class='title'>Instance methods</span>
+					<ul>
+													<li class=''>								
+								<a href="#FindDecisionTree">FindDecisionTree</a>
+																<span class='typeInfo'>(proxies:Array, manufacturer:String, callback:Function) : Void</span>																<ul class='summary'>
+									<li>Asynchronous method to find a decision tree to create a c4i.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#StartDecisionTree">StartDecisionTree</a>
+																<span class='typeInfo'>(model:String, callback:Function) : Void</span>																<ul class='summary'>
+									<li>Asynchronous method to start processing a decision tree previously found with FindDecisionTree.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#AdvanceDecisionTree">AdvanceDecisionTree</a>
+																<span class='typeInfo'>(element:Object, callback:Function) : Void</span>																<ul class='summary'>
+									<li>Asynchronous method to advance processing of the decision tree started with StartDecisionTree.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#FinishDecisionTree">FinishDecisionTree</a>
+																<span class='typeInfo'>(callback:Function) : Void</span>																<ul class='summary'>
+									<li>Asynchronous method to finish decision tree processing and obtain the resulting c4i file.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#SaveMissedSearch">SaveMissedSearch</a>
+																<span class='typeInfo'>(proxies:Array, manufacturer:String, model:String, callback:Function) : Void</span>																<ul class='summary'>
+									<li>Asynchronous method used to preserve failed search attempts to assist in populating the driver database.</li>
+								</ul>							</li>
+													<li class=''>								
+								<a href="#SaveCustomDriver">SaveCustomDriver</a>
+																<span class='typeInfo'>(proxies:Array, manufacturer:String, model:String, driverType:String, driver:String, callback:Function) : Void</span>																<ul class='summary'>
+									<li>Asynchronous method used to save custom drivers created by either the driver wizard or decision tree mechanisms.</li>
+								</ul>							</li>
+											</ul>
+									</div>
+					</div>	</div>
+																					<div class='memberSection'>
+			<h2 id='Constructor'>Constructor</h2>
+							<div class='member' id='DecisionTreeService'>
+									<h3>DecisionTreeService</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>DecisionTreeService</strong>(onReady:Function,
+                             onError:Function)</span>						</div>											<div class='description'>
+																			<p>DecisionTreeService constructor.</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		&nbsp;	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+					</div>
+				<div class='memberSection'>
+			<h2 id='Instancemethods'>Instance methods</h2>
+							<div class='member' id='AdvanceDecisionTree'>
+									<h3>AdvanceDecisionTree</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>AdvanceDecisionTree</strong>(element:Object,
+                             callback:Function) : Void</span>						</div>											<div class='description'>
+																			<p>Asynchronous method to advance processing of the decision tree started with <code>StartDecisionTree</code>.</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		&nbsp;	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+							<div class='member' id='FindDecisionTree'>
+									<h3>FindDecisionTree</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>FindDecisionTree</strong>(proxies:Array,
+                          manufacturer:String,
+                          callback:Function) : Void</span>						</div>											<div class='description'>
+																			<p>Asynchronous method to find a decision tree to create a c4i.</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		&nbsp;	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+							<div class='member' id='FinishDecisionTree'>
+									<h3>FinishDecisionTree</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>FinishDecisionTree</strong>(callback:Function) : Void</span>						</div>											<div class='description'>
+																			<p>Asynchronous method to finish decision tree processing and obtain the resulting c4i file.
+In addition to the c4i XML, the method will return a set of commands
+that need to be IR learned to obtain full functionality of the c4i.</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		<span class='colorizedCode code'>callback<span class='itemSeparator'>:</span></span>the callback function invoked when the response is received.  The signature
+of the callback is <code><span class="codeKeyword">function</span>(errorCode : <span class="codeIdentifier">Number</span>, c4i : <span class="codeIdentifier">String</span>, commandsToLearn : <span class="codeIdentifier">Array</span>) : <span class="codeIdentifier">Void</span></code>.
+The <code>commandsToLearn</code> argument is an array of strings containing the names of commands that
+do not have an IR code definition.  To obtain full functionality of the c4i, these commands
+should be processed by IR learning to obtain IR code definitions.	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+							<div class='member' id='SaveCustomDriver'>
+									<h3>SaveCustomDriver</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>SaveCustomDriver</strong>(proxies:Array,
+                          manufacturer:String,
+                          model:String,
+                          driverType:String,
+                          driver:String,
+                          callback:Function) : Void</span>						</div>											<div class='description'>
+																			<p>Asynchronous method used to save custom drivers created by either the driver wizard or decision tree mechanisms.</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		&nbsp;	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+							<div class='member' id='SaveMissedSearch'>
+									<h3>SaveMissedSearch</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>SaveMissedSearch</strong>(proxies:Array,
+                          manufacturer:String,
+                          model:String,
+                          callback:Function) : Void</span>						</div>											<div class='description'>
+																			<p>Asynchronous method used to preserve failed search attempts to assist in populating the driver database.
+Use this method whenever a search is made for a driver that is not found in the driver database and can't
+be picked from a list.  Use this method before using the driver wizard or decision tree methods to create
+a c4i file.</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		&nbsp;	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+							<div class='member' id='StartDecisionTree'>
+									<h3>StartDecisionTree</h3>											<div class='fullMemberString'>
+							<span class='code'>function <strong>StartDecisionTree</strong>(model:String,
+                           callback:Function) : Void</span>						</div>											<div class='description'>
+																			<p>Asynchronous method to start processing a decision tree previously found with <code>FindDecisionTree</code>.</p>						</div>										<div class='boxWithBorder'>
+														<div class='boxedElem'>
+		<div class='contentHolder'>
+			<span class='title'>Parameters</span>
+					<div class='item'>
+		&nbsp;	</div>
+		</div>
+	</div>
+
+											</div>				</div>
+					</div>
+		
+							</div>
+						</div>
+											<div id='sidebar'>
+		<div id='clearHeaderLeft'></div> 
+		<div id='sidebarContent'>
+				<div class="list">
+							<ul>
+		<li  class=''>											<li id='menu_index' class=''>				<a href="index.html">Documentation</a>
+</li>
+						</li>
+</ul>
+
+					<ul id='treemenu'>
+		<li  class=''>									<h2>Packages and classes</h2>											<ul>
+		<li  id='menu_package_com_control4_csdk' class='package'>
+																	<a href="package_com_control4_csdk.html">com.control4.csdk</a>
+
+															<ul>
+		<li  class=''>											<li id='menu_com_control4_csdk_DecisionTreeService' class=''>				<a href="com_control4_csdk_DecisionTreeService.html"><span class='packagePath'>com.control4.csdk.</span>DecisionTreeService</a>
+</li>
+						</li>
+</ul>
+
+				</li>
+</ul>
+
+				</li>
+</ul>
+
+			</div>					<div class="globalNav">
+							<ul>
+									<li>
+						<li id='menu_all-packages' class=''>				<a href="all-packages.html">Package tree</a>
+</li>					</li>
+									<li>
+						<li id='menu_all-classes' class=''>				<a href="all-classes.html">Classes</a>
+</li>					</li>
+									<li>
+						<li id='menu_all-methods' class=''>				<a href="all-methods.html">Methods</a>
+</li>					</li>
+									<li>
+						<li class=''></li>					</li>
+									<li>
+						<li class=''></li>					</li>
+									<li>
+						<li class=''></li>					</li>
+							</ul>	</div>
+		</div>
+	</div>
+
+					</div>
+					<div class='clear'>&nbsp;</div> 
+				</div>
+			</div>
+			<div id='header'>
+				<div id='headerContentWrapper'>
+					<div id='headerContent'>
+						<ul id='headerButtons'>
+															<li id='toggleTocButton'><a href="#"><span class='disclosure'>&#9660;</span><span class='closure'>&#9658;</span>Navigation</a></li>													</ul>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+	<div id="footerContent">
+		<ul>
+					</ul>
+	</div>
+</div>
+		</div>
+     </body>
+</html>

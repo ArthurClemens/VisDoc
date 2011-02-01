@@ -46,7 +46,7 @@
 	<key>CFBundleSignature</key>
 	<string>ViDo</string>
 	<key>CFBundleVersion</key>
-	<string>3.0.3</string>
+	<string>3.0.4</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
 	<key>NSMainNibFile</key>
@@ -58,6 +58,6 @@
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 	<key>VAVDCopyright</key>
-	<string>Copyright 2004-2010, Arthur Clemens, VisDoc contributors at http://visdoc.org/</string>
+	<string>Copyright 2004-2011, Arthur Clemens, VisDoc contributors at http://visdoc.org/</string>
 </dict>
 </plist>

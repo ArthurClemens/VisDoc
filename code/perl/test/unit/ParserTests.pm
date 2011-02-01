@@ -14,7 +14,7 @@ use VisDoc::ParserJava;
 use VisDoc::MethodData;
 use VisDoc::PropertyData;
 
-my $debug = 0;
+my $debug = 1;
 
 sub new {
     my $self = shift()->SUPER::new(@_);
@@ -28,7 +28,57 @@ sub set_up {
     VisDoc::FileData::initLinkDataRefs();
 }
 
-sub test_parseClassData_as2 {
+sub test_parse_params_star_notation {
+    my ($this) = @_;
+
+    my $text = '
+class org.some.TreeService {
+	/** Asynchronous method to advance processing of the decision tree started with <code>StartDecisionTree</code>.
+	 * @param element the current GUI element containing the answer needed to advance the decision tree.
+	 * @param callback the callback function invoked when the response is received.  The signature
+	 *    of the callback is <code>function(errorCode : Number, result : Object) : Void</code>.  The <code>result</code> object
+	 *    will be an instance of a GUI element indicating the next action to be taken by the UI.
+	 */
+	public function AdvanceDecisionTree(element : Object, callback : Function) : Void
+	{
+	}
+}';
+
+    my $fileParser = VisDoc::FileParser->new();
+    my $fileData   = $fileParser->parseText( $text, 'as2' );
+    my $classes    = $fileData->{packages}->[0]->{classes};
+    my $classData  = $classes->[0];
+
+    use Data::Dumper;
+    print("fileData=" . Dumper($fileData));
+
+    {
+        # test description
+        my $result   = $classData->{methods}->[0]->{javadoc}->getDescription();
+        my $expected = 'Asynchronous method to advance processing of the decision tree started with %VISDOC_STUB_CODE_BLOCK_1%.';
+        print("RES=$result.\n")   if $debug;
+        print("EXP=$expected.\n") if $debug;
+        $this->assert( $result eq $expected );
+    }
+    {
+        # test param 1 name
+        my $result   = $classData->{methods}->[0]->{javadoc}->{params}->[0]->{name};
+        my $expected = 'element';
+        print("RES=$result.\n")   if $debug;
+        print("EXP=$expected.\n") if $debug;
+        $this->assert( $result eq $expected );
+    }
+    {
+        # test param 1 value
+        my $result   = $classData->{methods}->[0]->{javadoc}->{params}->[0]->{value};
+        my $expected = 'the current GUI element containing the answer needed to advance the decision tree.';
+        print("RES=$result.\n")   if $debug;
+        print("EXP=$expected.\n") if $debug;
+        $this->assert( $result eq $expected );
+    }
+}    	
+	
+sub _test_parseClassData_as2 {
     my ($this) = @_;
 
     my $text = '
@@ -139,7 +189,7 @@ The first sentence of the class description is the class summary.
 
 =cut
 
-sub test_parseClassData_as3 {
+sub _test_parseClassData_as3 {
     my ($this) = @_;
 
     my $text = '
@@ -236,7 +286,7 @@ sub test_parseClassData_as3 {
 
 =cut
 
-sub test_parseClassData_as3_interface {
+sub _test_parseClassData_as3_interface {
     my ($this) = @_;
 
     my $text = '
@@ -321,7 +371,7 @@ sub test_parseClassData_as3_interface {
 
 =cut
 
-sub test_parseClassData_java {
+sub _test_parseClassData_java {
     my ($this) = @_;
 
     my $text = '
@@ -525,7 +575,7 @@ sub test_parseClassData_java {
 
 =cut
 
-sub test_memberpattern_as3 {
+sub _test_memberpattern_as3 {
     my ($this) = @_;
 
     my $tmp_parser = VisDoc::ParserAS3->new();
@@ -697,7 +747,7 @@ sub test_memberpattern_as3 {
 
 =cut
 
-sub test_parseMethods_as2 {
+sub _test_parseMethods_as2 {
     my ($this) = @_;
 
     my $text = 'class Asd {
@@ -854,7 +904,7 @@ sub test_parseMethods_as2 {
 
 =cut
 
-sub test_parseMethods_as3 {
+sub _test_parseMethods_as3 {
     my ($this) = @_;
 
     my $text = 'class Z {
@@ -1008,7 +1058,7 @@ sub test_parseMethods_as3 {
 
 =cut
 
-sub test_parseProperties_as2 {
+sub _test_parseProperties_as2 {
     my ($this) = @_;
 
     my $text = 'class AllTags {
@@ -1288,7 +1338,7 @@ sub test_parseProperties_as2 {
 
 =cut
 
-sub test_parseProperties__getsetonly_as2 {
+sub _test_parseProperties__getsetonly_as2 {
     my ($this) = @_;
 
     my $text = 'class AAA {
@@ -1345,7 +1395,7 @@ sub test_parseProperties__getsetonly_as2 {
 
 =cut
 
-sub test_parseProperties_as3 {
+sub _test_parseProperties_as3 {
     my ($this) = @_;
 
     my $text = 'class Def {
@@ -1638,7 +1688,7 @@ sub test_parseProperties_as3 {
 
 =cut
 
-sub test_parseProperties_as3_array {
+sub _test_parseProperties_as3_array {
     my ($this) = @_;
 
     my $text = "
@@ -1716,7 +1766,7 @@ package {
 
 =cut
 
-sub test_parseClasses_java_short {
+sub _test_parseClasses_java_short {
     my ($this) = @_;
 
     my $text = 'package points; 
@@ -1772,7 +1822,7 @@ class PointVec { Point[] vec; }';
 
 =cut
 
-sub test_parseClasses_java_interface {
+sub _test_parseClasses_java_interface {
     my ($this) = @_;
 
     my $text = 'package it.gotoandplay.smartfoxclient;
@@ -1902,7 +1952,7 @@ public interface ISFSEventListener
 
 =cut
 
-sub test_URI_as2_class {
+sub _test_URI_as2_class {
     my ($this) = @_;
 
     my $text = '	
@@ -1924,7 +1974,7 @@ sub test_URI_as2_class {
 
 =cut
 
-sub test_URI_as2_class_with_classpath {
+sub _test_URI_as2_class_with_classpath {
     my ($this) = @_;
 
     my $text = '	
@@ -1948,7 +1998,7 @@ sub test_URI_as2_class_with_classpath {
 
 =cut
 
-sub test_URI_as3 {
+sub _test_URI_as3 {
     my ($this) = @_;
 
     my $text = '/*
@@ -1997,7 +2047,7 @@ package org.asaplibrary.data.array /*ehm*/{
 
 =cut
 
-sub test_URI_java {
+sub _test_URI_java {
     my ($this) = @_;
 
     my $text = 'package treemap;
@@ -2038,7 +2088,7 @@ public interface TMNode {
     }
 }
 
-sub test_getDescriptionParts_simple {
+sub _test_getDescriptionParts_simple {
     my ($this) = @_;
 
     my $text = '/**
@@ -2085,7 +2135,7 @@ class A {}
     }
 }
 
-sub test_getDescriptionParts_simple2 {
+sub _test_getDescriptionParts_simple2 {
     my ($this) = @_;
 
     my $text = '/**
@@ -2132,7 +2182,7 @@ class A {}
     }
 }
 
-sub test_getDescriptionParts_empty {
+sub _test_getDescriptionParts_empty {
     my ($this) = @_;
 
     my $text = '/**
@@ -2178,7 +2228,7 @@ class A {}
     }
 }
 
-sub test_getDescriptionParts_1 {
+sub _test_getDescriptionParts_1 {
     my ($this) = @_;
 
     my $text = '/**
@@ -2225,7 +2275,7 @@ class A {}
     }
 }
 
-sub test_getDescriptionParts_2 {
+sub _test_getDescriptionParts_2 {
     my ($this) = @_;
 
     my $text = '/**
@@ -2273,7 +2323,7 @@ class A {}
     }
 }
 
-sub test_getDescriptionParts_3 {
+sub _test_getDescriptionParts_3 {
     my ($this) = @_;
 
     my $text = '/**
@@ -2330,7 +2380,7 @@ Test email string.
 
 =cut
 
-sub test_getDescriptionParts_4 {
+sub _test_getDescriptionParts_4 {
     my ($this) = @_;
 
     my $text = '/**
@@ -2381,7 +2431,7 @@ class A {}
 
 =cut
 
-sub test_getDescriptionParts_5 {
+sub _test_getDescriptionParts_5 {
     my ($this) = @_;
 
     my $text = '/**

@@ -336,7 +336,10 @@ sub writeData {
               if $inPreferences->{saveXML};
 
             # write HTML
-            my $htmlRef = _transformXmlToHtml( $inPreferences, $xml->{textRef}, $templateRef, $inPreferences->{docencoding}, {tocHtml => $$tocHtmlRef } );
+            my $data = {};
+            $data->{tocHtml} = $$tocHtmlRef if $tocHtmlRef && $$tocHtmlRef;
+
+            my $htmlRef = _transformXmlToHtml( $inPreferences, $xml->{textRef}, $templateRef, $inPreferences->{docencoding}, $data );
            _writeHtmlFile( $dirInfo->{dir}->{html},
                "$xml->{uri}.html", $htmlRef );
         }
@@ -567,7 +570,7 @@ sub _transformXmlToHtml {
     my ( $inPreferences, $inXmlTextRef, $inTemplateRef, $inEncoding, $inData ) = @_;
 
 	my $tpp = XML::TreePP->new();
-	$tpp->set( force_array => [ 'item', 'field', 'fields', 'memberSummaryPart', 'fromClass', 'memberSection', 'member', 'listGroup' ] );
+	$tpp->set( force_array => [ 'item', 'field', 'fields', 'memberSummaryPart', 'fromClass', 'memberSection', 'member', 'listGroup', 'paramfield' ] );
 	$tpp->set( attr_prefix => '' );
 	
 	my $data = $tpp->parse( ${$inXmlTextRef} );
@@ -578,7 +581,7 @@ sub _transformXmlToHtml {
 		$data->{document} = 1;
 	}
 	$data->{encoding} = $inEncoding;
-	$data->{showNavigation} = $inPreferences->{generateNavigation};
+	$data->{showNavigation} = $inPreferences->{generateNavigation} ? 1 : 0;
 	
 	# merge data
 	if ($inData) {
@@ -587,8 +590,8 @@ sub _transformXmlToHtml {
 		}
 	}
 
-   	#use Data::Dumper;
-    #print STDOUT "data=" . Dumper($data);
+# use Data::Dumper;
+# print STDOUT "data=" . Dumper($data);
     
     my $freeMarkerTemplate = ${$inTemplateRef};
     

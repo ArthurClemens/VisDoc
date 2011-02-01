@@ -16,7 +16,9 @@
 		}
 	};
 	function showNavigation() {
-		$('body').addClass('isShowingNavigation');
+		if (!$('body').hasClass('noNavigation')) {
+			$('body').addClass('isShowingNavigation');
+		}
 	};
 	function hideNavigation() {
 		$('body').removeClass('isShowingNavigation');

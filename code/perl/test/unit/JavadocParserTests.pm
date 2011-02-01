@@ -29,7 +29,7 @@ sub set_up {
 
 =cut
 
-sub test_getFieldNameParts {
+sub _test_getFieldNameParts {
     my ($this) = @_;
 
     my $text = '@author John Doe
@@ -73,7 +73,7 @@ sub test_getFieldNameParts {
 
 =cut
 
-sub test_getFieldNameParts_firstline {
+sub _test_getFieldNameParts_firstline {
     my ($this) = @_;
 
     my $text = 'This is the introduction
@@ -100,7 +100,7 @@ sub test_getFieldNameParts_firstline {
 
 =cut
 
-sub test_getFieldNameParts_empty {
+sub _test_getFieldNameParts_empty {
     my ($this) = @_;
 
     my $text = 'This is the introduction';
@@ -134,7 +134,7 @@ sub test_getFieldNameParts_empty {
 
 =cut
 
-sub test_getFieldNameParts_params {
+sub _test_getFieldNameParts_params {
     my ($this) = @_;
 
     my $text = '@param inText: the text to be processed
@@ -184,7 +184,42 @@ sub test_getFieldNameParts_params {
     }
 }
 
-sub test_description_anonymous {
+=pod
+
+=cut
+
+sub _test_getFieldNameParts_params_with_star_notation {
+    my ($this) = @_;
+
+    my $text = '@param inText: the text to be processed
+@param list The list to populate
+@param effect (optional): effect to apply to members
+@return The list.';
+
+    my $parser = VisDoc::JavadocParser->new();
+    my ( $firstLine, $fieldNameParts ) =
+      VisDoc::JavadocParser->_getFieldNameParts($text);
+
+    {
+
+        # test firstLine
+        my $result   = $firstLine;
+        my $expected = '';
+        print("RES=$result.\n")   if $debug;
+        print("EXP=$expected.\n") if $debug;
+        $this->assert( $result eq $expected );
+    }
+    {
+
+        # test param 1
+        my $result   = $$fieldNameParts[0];
+        my $expected = 'param inText: the text to be processed';
+        print("RES=$result.\n")   if $debug;
+        print("EXP=$expected.\n") if $debug;
+        $this->assert( $result eq $expected );
+    }
+}
+sub _test_description_anonymous {
     my ($this) = @_;
 
     my $text = 'Description text.';
@@ -200,7 +235,7 @@ sub test_description_anonymous {
     $this->assert( $result eq $expected );
 }
 
-sub test_description_with_anonymous {
+sub _test_description_with_anonymous {
     my ($this) = @_;
 
     my $text = 'This is the first line. 
@@ -219,7 +254,7 @@ This also belongs to the description.
     $this->assert( $result eq $expected );
 }
 
-sub test_description_empty {
+sub _test_description_empty {
     my ($this) = @_;
 
     my $text = '@author Jonathan';
@@ -236,7 +271,7 @@ sub test_description_empty {
 
 }
 
-sub test_fieldsWithName {
+sub _test_fieldsWithName {
     my ($this) = @_;
 
     my $text = '@author
@@ -298,7 +333,7 @@ sub test_fieldsWithName {
 
 =cut
 
-sub test_tag_see {
+sub _test_tag_see {
     my ($this) = @_;
 
     my $text = 'package {
@@ -426,7 +461,7 @@ class A {}
 
 =cut
 
-sub test_tag_throws {
+sub _test_tag_throws {
     my ($this) = @_;
 
     my $text = 'package {
@@ -465,7 +500,7 @@ sub test_tag_throws {
 
 =cut
 
-sub test_tag_exception {
+sub _test_tag_exception {
     my ($this) = @_;
 
     my $text = 'package {
@@ -501,7 +536,7 @@ sub test_tag_exception {
 }
 
 =pod
-sub test_tag_overload {
+sub _test_tag_overload {
     my ($this) = @_;
 
 	my $text = 'package {
@@ -540,7 +575,7 @@ sub test_tag_overload {
 =cut
 
 =pod
-sub test_addField {
+sub _test_addField {
     my ($this) = @_;
 
 	my $text = '@author
@@ -570,7 +605,7 @@ sub test_addField {
 
 =cut
 
-sub test_tag_param {
+sub _test_tag_param {
     my ($this) = @_;
 
     my $text = 'package {
@@ -589,7 +624,7 @@ class A {}
 
 }
 
-sub test_tag_sends {
+sub _test_tag_sends {
     my ($this) = @_;
 
     my $text = 'package {
@@ -663,7 +698,7 @@ sub test_tag_sends {
 
 =cut
 
-sub test_tag_in_middle_of_sentence {
+sub _test_tag_in_middle_of_sentence {
     my ($this) = @_;
 
     my $text = '
@@ -709,7 +744,7 @@ Testing a variety of @see values.';
 }
 
 =pod
-sub test_getDescriptionParts_5 {
+sub _test_getDescriptionParts_5 {
     my ($this) = @_;
 
 	my $text = '/**
@@ -756,7 +791,7 @@ class A {}
 }
 =cut
 
-sub test_tag_link {
+sub _test_tag_link {
     my ($this) = @_;
 
     my $text = 'package {
@@ -901,7 +936,7 @@ class A {
     }
 }
 
-sub test_tag_linkplain {
+sub _test_tag_linkplain {
     my ($this) = @_;
 
     my $text = 'package {
@@ -983,7 +1018,7 @@ class A {}
 
 =cut
 
-sub test_tag_literal {
+sub _test_tag_literal {
     my ($this) = @_;
 
     my $text = 'package {
@@ -1009,7 +1044,7 @@ class A {}
 
 =cut
 
-sub test_tag_code {
+sub _test_tag_code {
     my ($this) = @_;
 
     my $text = 'package {
@@ -1035,7 +1070,7 @@ class A {}
 
 =cut
 
-sub test_tag_img {
+sub _test_tag_img {
     my ($this) = @_;
 
     my $text = 'package {
@@ -1059,7 +1094,7 @@ class A {}
 
 =cut
 
-sub test_tag_inheritDoc {
+sub _test_tag_inheritDoc {
     my ($this) = @_;
 
     my $text1 = '
@@ -1214,7 +1249,7 @@ sub test_tag_inheritDoc {
 
 =cut
 
-sub test_params {
+sub _test_params {
     my ($this) = @_;
 
     my $text = 'package {
@@ -1296,7 +1331,7 @@ class A {}
 
 =cut
 
-sub test_return {
+sub _test_return {
     my ($this) = @_;
 
     my $text = 'package {

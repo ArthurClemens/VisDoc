@@ -72,9 +72,9 @@ Field within box
 	<div class='boxedElem'>
 		<div class='contentHolder'>
 			<span class='title'>${data.title}</span>
-	<#if data.paramfield??>
-			<@paramfield paramData=data.paramfield/>
-	<#else>
+		<#list data.paramfield as paramfield>
+			<@paramfield paramData=paramfield/>
+		</#list>
 			<div class='item'>
 		<#if data.description.item??>
 			<ul>
@@ -94,7 +94,6 @@ Field within box
 		</#if>
 			</div>
 			<@metadatatags />
-	</#if>
 		</div>
 	</div>
 </#macro>
@@ -512,7 +511,7 @@ HTML
 		<script type="text/javascript" src="${js}"></script>
 </#list></#if>
 	</head>
-	<body<#if showNavigation??> class='isShowingNavigation'</#if> id='page_${pageClass}'>
+	<body<#if showNavigation=1> class='isShowingNavigation'<#else> class='noNavigation'</#if> id='page_${pageClass}'>
 	    <div id='page'> 
 			<div id='wrapper'>
 				<div id='outer'> 
@@ -538,7 +537,7 @@ HTML
 				<div id='headerContentWrapper'>
 					<div id='headerContent'>
 						<ul id='headerButtons'>
-							<#if showNavigation??>
+							<#if showNavigation=1>
 								<li id='toggleTocButton'><a href="#"><span class='disclosure'>&#9660;</span><span class='closure'>&#9658;</span>Navigation</a></li>
 							</#if>
 							<#if meta.showPrivate??>${tmplShowHidePrivate}</#if>
