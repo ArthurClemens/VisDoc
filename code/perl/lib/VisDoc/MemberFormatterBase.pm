@@ -297,7 +297,7 @@ sub fullMemberStringRight {
         foreach my $elem (@elems) {
             my $parameterList = $this->getParametersString( $elem, $inMember );
             my @paramList = VisDoc::StringUtils::commaSeparatedListFromCommaSeparatedString($parameterList);
-            my $outputParameterList = join (",\n", @paramList);
+            my $outputParameterList = join (",\n ", @paramList);
             $outText .= $outputParameterList;
             $outText .= $this->getReturnTypeString( $elem, $inMember );
         }
