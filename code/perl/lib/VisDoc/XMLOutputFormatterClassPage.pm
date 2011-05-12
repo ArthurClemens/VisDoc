@@ -1327,7 +1327,7 @@ sub _writeMembers_forMemberGroup_memberText_fields {
 #
 # The MIT License
 #
-# Copyright (c) 2010 Arthur Clemens, VisDoc contributors
+# Copyright (c) 2010-2011 Arthur Clemens, VisDoc contributors
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
