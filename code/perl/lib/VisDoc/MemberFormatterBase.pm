@@ -5,6 +5,8 @@ package VisDoc::MemberFormatterBase;
 use strict;
 use warnings;
 
+use VisDoc::StringUtils;
+
 =pod
 
 =cut
@@ -289,13 +291,14 @@ sub fullMemberStringRight {
     my ( $this, $inMember ) = @_;
 
     my $outText = '';
-
+    
     if ( $inMember->isa("VisDoc::MethodData") ) {
         my @elems = split( /\|/, $this->{PATTERN_MEMBER_METHOD_RIGHT} );
         foreach my $elem (@elems) {
             my $parameterList = $this->getParametersString( $elem, $inMember );
-            $parameterList =~ s/\s*,\s*/,\n /go;
-            $outText .= $parameterList;
+            my @paramList = VisDoc::StringUtils::commaSeparatedListFromCommaSeparatedString($parameterList);
+            my $outputParameterList = join (",\n", @paramList);
+            $outText .= $outputParameterList;
             $outText .= $this->getReturnTypeString( $elem, $inMember );
         }
     }

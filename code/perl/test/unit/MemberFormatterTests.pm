@@ -98,6 +98,40 @@ sub test_formatParameterData_as3 {
     }
 }
 
+=pod
+
+=cut
+
+sub test_parseMethods_comma_in_parameters_as3 {
+    my ($this) = @_;
+
+    my $text = 'package {
+    class Z {
+
+	public static function format(value:Number, kDelim:String = ",", minLength:uint = 0, fillChar:String = "0"):String {
+}
+}';
+
+	my $fileData  = VisDoc::parseText( $text, 'as3' );
+    my $classData = $fileData->{packages}->[0]->{classes}->[0];
+    my $methods   = $classData->{methods};
+
+	my $formatter =
+          VisDoc::MemberFormatterFactory::getMemberFormatterForLanguage('as3');
+    {
+        # test fullMemberStringRight
+        my $result   = $formatter->fullMemberStringRight($methods->[0]);
+        my $expected = '(value:Number,
+kDelim:String = ",",
+minLength:uint,
+fillChar:String = "0") : String';
+        print("RES=$result.\n")   if $debug;
+        print("EXP=$expected.\n") if $debug;
+        $this->assert( $result eq $expected );
+    }
+
+}
+
 sub test_formatParameterData_java {
     my ($this) = @_;
 
