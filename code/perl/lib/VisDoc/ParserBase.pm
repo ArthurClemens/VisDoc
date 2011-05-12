@@ -950,6 +950,9 @@ sub _postProcessMethodData {
 
     foreach my $methodData (@$inMethods) {
 
+        # interface methods are always public
+        $methodData->{isAccessPublic} = 1 if $inClassData->{type} == $VisDoc::ClassData::TYPE->{'INTERFACE'};
+        
         my $type = $methodData->{type};
 
         # is constructor?

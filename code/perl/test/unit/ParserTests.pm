@@ -365,6 +365,14 @@ sub test_parseClassData_as3_interface {
         print("EXP=$expected.\n") if $debug;
         $this->assert( $result eq $expected );
     }
+    {
+        # test method 1: is public
+        my $result   = $classData->{methods}->[1]->isPublic();
+        my $expected = 1;
+        print("RES=$result.\n")   if $debug;
+        print("EXP=$expected.\n") if $debug;
+        $this->assert( $result eq $expected );
+    }
 }
 
 =pod
