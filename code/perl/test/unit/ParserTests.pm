@@ -319,26 +319,15 @@ sub test_parseClassData_as3_interface {
 		*/
 		function addItemAt(item:*, index:int):Boolean;
 		
-		/**
-			Removes any event listeners and stops all internal processes to help allow for prompt garbage collection.
-			
-			<strong>Always call <code>destroy()</code> before deleting last object pointer.</strong>
-		*/
-		function destroy():void;
-		
-		/**
-			Determines if the object has been destroyed <code>true</code>, or is still available for use <code>false</code>.
-		*/
-		function get destroyed():Boolean;
-		
 	}
 }';
     my $fileParser = VisDoc::FileParser->new();
     my $fileData   = $fileParser->parseText($text);
     my $classData  = $fileData->{packages}->[0]->{classes}->[0];
 
-    use Data::Dumper;
-    print("classData=" . Dumper($classData));
+    #use Data::Dumper;
+    #print("classData=" . Dumper($classData));
+
 
     {
 
@@ -378,31 +367,7 @@ sub test_parseClassData_as3_interface {
     }
     {
         # test method 1: is public
-        my $result   = $classData->{methods}->[0]->isPublic();
-        my $expected = 1;
-        print("RES=$result.\n")   if $debug;
-        print("EXP=$expected.\n") if $debug;
-        $this->assert( $result eq $expected );
-    }
-    {
-        # test method 2: is public
         my $result   = $classData->{methods}->[1]->isPublic();
-        my $expected = 1;
-        print("RES=$result.\n")   if $debug;
-        print("EXP=$expected.\n") if $debug;
-        $this->assert( $result eq $expected );
-    }
-    {
-        # test method 3: is public
-        my $result   = $classData->{methods}->[2]->isPublic();
-        my $expected = 1;
-        print("RES=$result.\n")   if $debug;
-        print("EXP=$expected.\n") if $debug;
-        $this->assert( $result eq $expected );
-    }
-    {
-        # test method 4: is public
-        my $result   = $classData->{methods}->[3]->isPublic();
         my $expected = 1;
         print("RES=$result.\n")   if $debug;
         print("EXP=$expected.\n") if $debug;

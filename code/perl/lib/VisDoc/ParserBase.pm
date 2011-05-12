@@ -949,6 +949,9 @@ sub _postProcessMethodData {
     my ( $this, $inClassData, $inMethods ) = @_;
 
     foreach my $methodData (@$inMethods) {
+
+        # interface methods are always public
+        $methodData->{isAccessPublic} = 1 if $inClassData->{type} == $VisDoc::ClassData::TYPE->{'INTERFACE'};
         
         my $type = $methodData->{type};
 
@@ -982,7 +985,7 @@ sub _postProcessPropertyData {
     my ( $this, $inClassData, $inProperties ) = @_;
 
     foreach my $propertyData (@$inProperties) {
-        
+
         my $type = $propertyData->{type};
 
         # is class method?
