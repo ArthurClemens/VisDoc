@@ -122,9 +122,9 @@ sub test_parseMethods_comma_in_parameters_as3 {
         # test fullMemberStringRight
         my $result   = $formatter->fullMemberStringRight($methods->[0]);
         my $expected = '(value:Number,
- kDelim:String = ",",
- minLength:uint,
- fillChar:String = "0") : String';
+kDelim:String = ",",
+minLength:uint,
+fillChar:String = "0") : String';
         print("RES=$result.\n")   if $debug;
         print("EXP=$expected.\n") if $debug;
         $this->assert( $result eq $expected );
