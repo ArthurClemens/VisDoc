@@ -87,7 +87,7 @@ Creates a NSDictionary property list object from a string. The string must have 
  
  The MIT License
  
- Copyright (c) 2010 Arthur Clemens, VisDoc contributors
+ Copyright (c) 2010-2011 Arthur Clemens, VisDoc contributors
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
