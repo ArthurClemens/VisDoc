@@ -258,6 +258,10 @@ s/(\/\/.*)/$VisDoc::StringUtils::STUB_COLORIZE_CODE_COMMENT_START$1$VisDoc::Stri
     $_[1] =~
 s/$quotedPattern/$VisDoc::StringUtils::STUB_COLORIZE_CODE_STRING_START$1$VisDoc::StringUtils::STUB_COLORIZE_CODE_STRING_END/g;
 
+    # special characters
+    $_[1] =~
+s/(&#[0-9]+)/$VisDoc::StringUtils::STUB_NO_COLORIZE_START$1$VisDoc::StringUtils::STUB_NO_COLORIZE_END/g;
+
     # numbers
     $_[1] =~
 s/((&amp;#|%)*(\b[0-9]+\b))/$VisDoc::StringUtils::STUB_COLORIZE_CODE_NUMBER_START$1$VisDoc::StringUtils::STUB_COLORIZE_CODE_NUMBER_END/g;
@@ -283,6 +287,11 @@ sub _substituteColorTokens {
 
     #my $this = $_[0]
     #my $text = $_[1]
+
+	$_[1] =~
+s/$VisDoc::StringUtils::STUB_NO_COLORIZE_START//go;
+    $_[1] =~
+s/$VisDoc::StringUtils::STUB_NO_COLORIZE_END//go;
 
     $_[1] =~
 s/$VisDoc::StringUtils::STUB_COLORIZE_CODE_STRING_START/<span class="codeString">/go;

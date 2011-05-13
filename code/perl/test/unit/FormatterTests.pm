@@ -71,6 +71,25 @@ sub test_formatCodeText2 {
     $this->assert( $result eq $expected );
 }
 
+=pod
+
+=cut
+
+sub test_formatCodeText3 {
+    my ($this) = @_;
+
+    my $text = '&#8226;';
+
+    my $fileData = VisDoc::FileData->new();
+    $fileData->{language} = 'as3';
+    my $result   = $fileData->_formatCodeText($text);
+    my $expected = '<code>&#8226;</code>';
+
+    print("RES=$result.\n")   if $debug;
+    print("EXP=$expected.\n") if $debug;
+    $this->assert( $result eq $expected );
+}
+
 
 =pod
 
@@ -115,7 +134,7 @@ sub test_colorizeCode_2 {
 
     my $result = $text;
     my $expected =
-'the numbers #ff0000, <span class="codeNumber">%26</span> <span class="codeKeyword">and</span> <span class="codeNumber">&amp;#0123</span>;';
+'the numbers #ff0000, <span class="codeNumber">%26</span> <span class="codeKeyword">and</span> &#0123;';
 
     print("RES=$result.\n")   if $debug;
     print("EXP=$expected.\n") if $debug;
