@@ -342,6 +342,8 @@ sub writeData {
             my $htmlRef = _transformXmlToHtml( $inPreferences, $xml->{textRef}, $templateRef, $inPreferences->{docencoding}, $data );
            _writeHtmlFile( $dirInfo->{dir}->{html},
                "$xml->{uri}.html", $htmlRef );
+               
+            VisDoc::Logger::logWrittenHtml("$xml->{uri}.html");
         }
     }
     

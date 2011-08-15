@@ -69,7 +69,8 @@ $preferences->{'doc-sources'} = \$process;
     'saveXML:i',              'datapath:s',
     'templateCssDirectory:s', 'templateJsDirectory:s',
     'templateFreeMarker:s',   'feedback:i',
-    'openInBrowser:i',        'help'
+    'openInBrowser:i',        'help',
+    'logStdOut:i'
 );
 
 usage() if $preferences->{help};
@@ -102,7 +103,11 @@ if ($@) {
     print STDOUT $@;
     die;
 }
-VisDoc::Logger->clear();
+VisDoc::Logger::clear();
+
+if ($preferences->{logStdOut}) {
+	VisDoc::Logger::setLogStdOut(1);	
+}
 
 # store processed files:
 my $collectiveFileData;
@@ -308,6 +313,12 @@ Not implemented.
 =item B<-openInBrowser>
 
 Whether to open generated documentation in a browser.
+Values: 1 or 0
+Default: 0
+
+=item B<-logStdOut>
+
+Whether to print progress to STDOUT
 Values: 1 or 0
 Default: 0
 

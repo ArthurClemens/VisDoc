@@ -6,9 +6,22 @@ use strict;
 use warnings;
 our $writeDir;
 our $logText = '';
+our $logStdOut = 0;
 
 sub clear {
     $logText = '';
+}
+
+sub setLogStdOut {
+    my ($state) = @_;
+    
+    $logStdOut = $state;
+}
+
+sub printOutput {
+    my ($message) = @_;
+    
+    print STDERR $message if $logStdOut;
 }
 
 sub logParsedFile {
@@ -16,7 +29,8 @@ sub logParsedFile {
 
     my ( $volume, $directories, $name ) = File::Spec->splitpath($file);
 
-    $logText .= "PARSED#$name#$file\n";
+    $logText .= "PARSED#$name#$file\n";    
+    printOutput("parsed:$file\n");
 }
 
 sub logTime {
@@ -25,6 +39,13 @@ sub logTime {
     my $seconds = $endTime - $startTime;
 
     $logText .= "TIME#seconds=$seconds\n";
+    printOutput("time:$seconds secs.\n");
+}
+
+sub logWrittenHtml {
+    my ($file) = @_;
+    
+    printOutput("written:$file\n");
 }
 
 sub getLogText {
