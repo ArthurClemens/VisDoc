@@ -1,8 +1,17 @@
-# VisDoc generates html documentation from ActionScript 2.0, 3.0 and Java class files.
+# VisDoc
+A tool to generate html documentation from ActionScript 2.0, 3.0 and Java class files.
 
-## Example
 
-http://asaplibrary.org/api/html/
+## Examples
+* http://asaplibrary.org/api/html/
+* http://as3.casalib.org/docs/
+* http://code.johnpolacek.com/docs/html/index.html
+
+
+## Also used by
+* https://github.com/jcarpe/jcarpe
+* https://github.com/joskoomen/YT-API-AS3
+* https://github.com/lucasmotta/NuMediaPlayer
 
 
 ## Usage
@@ -37,6 +46,7 @@ templateCssDirectory  'templates/css',
 templateJsDirectory   'templates/js',
 templateFreeMarker    'templates/ftl/VisDoc.ftl',
 ```
+
 
 ## Licence
 
