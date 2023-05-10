@@ -3,9 +3,11 @@ A tool to generate html documentation from ActionScript 2.0, 3.0 and Java class 
 
 
 ## Examples
-* http://asaplibrary.org/api/html/
+* [http://asaplibrary.org/](http://arthurclemens.github.io/asaplibrary/html/all-packages.html)
 * http://as3.casalib.org/docs/
-* http://code.johnpolacek.com/docs/html/index.html
+
+### Examples older versions of VisDoc
+* [smartfoxserver.com](http://docs2x.smartfoxserver.com/api-docs/redbox/html/overview-tree.html)
 
 
 ## Also used by
